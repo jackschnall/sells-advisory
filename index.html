@@ -1,0 +1,5010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sells Advisory | Middle-Market M&A Investment Bank</title>
+  <meta name="description" content="Sells Advisory is a middle-market investment bank and M&A advisory firm. Trust Sells to guide you through your most important business transactions.">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================
+       CSS RESET & BASE
+       ========================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #102772;
+      --gold: #ea9d13;
+      --gold-hover: #d08e10;
+      --blue: #3D5A99;
+      --light-bg: #EAEAF0;
+      --text-dark: #222244;
+      --text-muted: #5f6d7e;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --max-width: 1200px;
+      --border-radius: 6px;
+      --transition-speed: 0.3s;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition-speed);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    input, textarea, button, select {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ==========================================================
+       PAGE VISIBILITY (SPA)
+       ========================================================== */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* ==========================================================
+       LAYOUT UTILITIES
+       ========================================================== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-gold {
+      color: var(--gold);
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .text-navy {
+      color: var(--navy);
+    }
+
+    /* Two-column grid layouts */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .two-col-55-45 {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .two-col-45-55 {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .two-col-40-60 {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .two-col-60-40 {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .two-col,
+      .two-col-55-45,
+      .two-col-45-55,
+      .two-col-40-60,
+      .two-col-60-40 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ==========================================================
+       SECTION BACKGROUNDS
+       ========================================================== */
+    .section-white {
+      background: #fff;
+      padding: 60px 0;
+    }
+
+    .section-light {
+      background: var(--light-bg);
+      padding: 60px 0;
+    }
+
+    .section-navy {
+      background: var(--navy);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .section-blue {
+      background: var(--blue);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .section-navy-pattern {
+      background-color: var(--navy);
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-size: auto;
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .section-light-pattern {
+      background-color: var(--light-bg);
+      background-image: url('images/patterns/pattern-white-2rows.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-size: auto;
+      padding: 60px 0;
+    }
+
+    /* ==========================================================
+       SHARED DECORATIVE ELEMENTS
+       ========================================================== */
+    .gold-dotted {
+      border: none;
+      border-top: 2px dotted var(--gold);
+      margin: 24px 0;
+    }
+
+    .section-heading {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .section-heading-lg {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .section-heading-sm {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================================
+       PILL BUTTONS
+       ========================================================== */
+    .pill {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .pill-gold {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      border-radius: 0;
+      clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
+      padding: 14px 44px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .pill-gold:hover {
+      background: var(--gold-hover);
+      transform: translateY(-1px);
+    }
+
+    .pill-outline {
+      background: transparent;
+      color: var(--navy);
+      border: none;
+      border-radius: 0;
+      padding: 12px 40px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 0;
+    }
+
+    .pill-outline::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold);
+      clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
+      z-index: -1;
+    }
+
+    .pill-outline::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      background: #fff;
+      clip-path: polygon(7% 0%, 93% 0%, 100% 50%, 93% 100%, 7% 100%, 0% 50%);
+      z-index: -1;
+    }
+
+    .pill-outline:hover::after {
+      background: var(--gold);
+    }
+
+    .pill-outline:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .pill-white-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .pill-white-outline:hover {
+      background: #fff;
+      color: var(--navy);
+    }
+
+    /* ==========================================================
+       PHOTO PLACEHOLDER
+       ========================================================== */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #8899BB 0%, #667799 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      min-height: 200px;
+      border-radius: var(--border-radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%);
+    }
+
+    /* ==========================================================
+       NAVIGATION - HEADER
+       ========================================================== */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Row 1: Logo + Careers + Contact */
+    .nav-row1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .nav-logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    .nav-logo:hover {
+      opacity: 0.9;
+    }
+
+    .nav-row1-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-row1-right a.careers-link {
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color var(--transition-speed);
+    }
+
+    .nav-row1-right a.careers-link:hover {
+      color: var(--gold);
+    }
+
+    .nav-row1-right .pill {
+      padding: 8px 22px;
+      font-size: 0.85rem;
+    }
+
+    /* Row 2: Centered nav links with diamond separators */
+    .nav-row2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .nav-row2 a {
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 4px 8px;
+      position: relative;
+      transition: color var(--transition-speed);
+    }
+
+    .nav-row2 a:hover,
+    .nav-row2 a.active {
+      color: var(--gold);
+    }
+
+    .nav-row2 a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .nav-diamond {
+      color: var(--gold);
+      font-size: 0.6rem;
+      margin: 0 6px;
+      user-select: none;
+    }
+
+    .nav-dotted {
+      border-bottom: 2px dotted var(--gold);
+      margin: 0;
+    }
+
+    /* Company Dropdown */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+      border-radius: var(--border-radius);
+      padding: 8px 0;
+      min-width: 210px;
+      z-index: 100;
+      margin-top: 8px;
+    }
+
+    .nav-dropdown .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      height: 8px;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: all var(--transition-speed);
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--light-bg);
+      color: var(--gold);
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 10;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      transition: all var(--transition-speed);
+      border-radius: 1px;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      background: #fff;
+      padding: 16px 24px 24px;
+      border-top: 1px solid #eee;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-weight: 500;
+      color: var(--text-dark);
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+      transition: color var(--transition-speed);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu .mobile-sub {
+      padding-left: 20px;
+    }
+
+    .mobile-menu .mobile-sub a {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .nav-row2 {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-row1-right .careers-link {
+        display: none;
+      }
+
+      .nav-logo img {
+        height: 36px;
+      }
+    }
+
+    /* ==========================================================
+       HERO BANNER
+       ========================================================== */
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      min-height: 300px;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-color: var(--navy);
+      display: flex;
+      align-items: center;
+      padding: 48px 48px 48px 48px;
+    }
+
+    .hero-left h1 {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-right {
+      background: linear-gradient(135deg, #8899BB 0%, #667799 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+      overflow: hidden;
+    }
+
+    .hero-bar {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-gold-line {
+      height: 4px;
+      background: var(--gold);
+      width: 100%;
+    }
+
+    .hero-bullets {
+      margin-top: 16px;
+    }
+
+    .hero-bullets li {
+      color: #fff;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    .hero-bullets li img {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: 200px;
+      }
+
+      .hero-right {
+        display: none;
+      }
+
+      .hero-left {
+        padding: 32px 24px;
+      }
+
+      .hero-left h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* ==========================================================
+       DIAMOND BULLET LIST
+       ========================================================== */
+    .diamond-list {
+      columns: 2;
+      gap: 32px;
+    }
+
+    .diamond-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      break-inside: avoid;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .diamond-list li img {
+      width: 8px;
+      height: 8px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .diamond-list {
+        columns: 1;
+      }
+    }
+
+    /* ==========================================================
+       STATS BAR
+       ========================================================== */
+    .stats-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stat-box {
+      background: var(--gold);
+      padding: 20px 16px;
+      border-radius: var(--border-radius);
+      text-align: center;
+      flex: 1;
+      min-width: 160px;
+      max-width: 220px;
+      transition: transform var(--transition-speed);
+    }
+
+    .stat-box:hover {
+      transform: translateY(-2px);
+    }
+
+    .stat-box .stat-num {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.8rem;
+      color: #fff;
+      opacity: 0.9;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 768px) {
+      .stat-box {
+        min-width: 130px;
+        flex: 0 0 45%;
+      }
+
+      .stat-box .stat-num {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* ==========================================================
+       SERVICE CARDS
+       ========================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 24px 16px;
+      border-top: 3px dotted var(--gold);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-card img {
+      height: 80px;
+      width: auto;
+      margin: 0 auto 16px;
+    }
+
+    .service-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       CONTENT CARDS (HOME PAGE TWO-CARD SECTION)
+       ========================================================== */
+    .content-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .content-card {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-card .card-photo {
+      height: 220px;
+      background: linear-gradient(135deg, #8899BB, #667799);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    .content-card .card-body {
+      padding: 28px 24px;
+    }
+
+    .content-card .card-body h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .content-card .card-body p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .content-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       TESTIMONIAL SECTION
+       ========================================================== */
+    .testimonial-section {
+      background: var(--blue);
+      padding: 60px 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .testimonial-marks {
+      font-size: 3.5rem;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 16px;
+    }
+
+    .testimonial-company {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    .testimonial-diamond {
+      width: 12px;
+      height: 12px;
+      margin: 16px auto 0;
+    }
+
+    /* ==========================================================
+       RIGHT PEOPLE SECTION
+       ========================================================== */
+    .right-people-list {
+      columns: 2;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .right-people-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      break-inside: avoid;
+    }
+
+    .right-people-list li::before {
+      content: '\25C6';
+      color: var(--gold);
+      font-size: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================
+       LET'S TALK / CONTACT FORM
+       ========================================================== */
+    .lets-talk-section {
+      background: var(--navy);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .form-grid input,
+    .form-grid textarea,
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: #f0f0f5;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+      color: var(--text-dark);
+    }
+
+    .form-grid input::placeholder,
+    .form-grid textarea::placeholder,
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #999;
+    }
+
+    .form-grid input:focus,
+    .form-grid textarea:focus,
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-bottom-color: var(--gold);
+      box-shadow: 0 2px 0 var(--gold);
+    }
+
+    .form-grid textarea {
+      height: 100%;
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .form-grid .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .input-error {
+      border-bottom-color: #e53935 !important;
+      box-shadow: 0 2px 0 #e53935 !important;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid textarea {
+        min-height: 120px;
+      }
+    }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+    #site-footer {
+      background: var(--navy);
+      color: #fff;
+      padding: 40px 0 20px;
+    }
+
+    .footer-dotted {
+      border: none;
+      border-top: 2px dotted var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-grid h4 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .footer-grid p,
+    .footer-grid a {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-grid a:hover {
+      color: var(--gold);
+    }
+
+    .footer-grid .gold-link {
+      color: var(--gold);
+    }
+
+    .footer-grid .gold-link:hover {
+      color: var(--gold-hover);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .footer-nav a {
+      font-size: 0.85rem;
+      transition: color var(--transition-speed);
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .footer-right img {
+      height: 40px;
+      width: auto;
+    }
+
+    .linkedin-icon {
+      width: 36px;
+      height: 36px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+      transition: all var(--transition-speed);
+    }
+
+    .linkedin-icon:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(234, 157, 19, 0.1);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-bottom p {
+      margin-bottom: 4px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color var(--transition-speed);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-right {
+        align-items: flex-start;
+      }
+
+      .footer-nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ==========================================================
+       SUB-TABS BAR (Company sub-pages)
+       ========================================================== */
+    .sub-tabs {
+      background: var(--navy);
+      padding: 14px 0;
+      text-align: center;
+    }
+
+    .sub-tabs a {
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 4px 12px;
+      opacity: 0.8;
+      transition: all var(--transition-speed);
+    }
+
+    .sub-tabs a:hover,
+    .sub-tabs a.active {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .sub-tabs .nav-diamond {
+      color: var(--gold);
+    }
+
+    /* ==========================================================
+       TEAM GRID
+       ========================================================== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .team-member {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .hex-wrap {
+      width: 160px;
+      height: 180px;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+
+    .hex-photo {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background: linear-gradient(135deg, #8899BB, #667799);
+      position: relative;
+      transition: all var(--transition-speed);
+    }
+
+    .hex-photo::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gold);
+    }
+
+    .team-member:hover .hex-photo {
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+    }
+
+    .hex-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background: rgba(16, 39, 114, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-speed);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .team-member:hover .hex-overlay {
+      opacity: 1;
+    }
+
+    .team-member h4 {
+      font-size: 1rem;
+      margin-bottom: 2px;
+      color: var(--text-dark);
+    }
+
+    .team-member p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 992px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .hex-wrap {
+        width: 120px;
+        height: 135px;
+      }
+    }
+
+    /* ==========================================================
+       BIO MODAL
+       ========================================================== */
+    .bio-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(16, 39, 114, 0.85);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      backdrop-filter: blur(4px);
+    }
+
+    .bio-overlay.open {
+      display: flex;
+    }
+
+    .bio-modal-wrap {
+      max-width: 900px;
+      width: 100%;
+      position: relative;
+      animation: bioFadeIn 0.3s ease;
+    }
+
+    @keyframes bioFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .bio-modal-title {
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .bio-card {
+      background: #fff;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      overflow: hidden;
+      min-height: 300px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio-card-left {
+      background: linear-gradient(135deg, #8899BB, #667799);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      min-height: 300px;
+    }
+
+    .bio-card-right {
+      padding: 32px;
+    }
+
+    .bio-card-right h3 {
+      font-family: var(--font-heading);
+      color: var(--blue);
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .bio-card-right .bio-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .bio-card-right p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .bio-card-right .bio-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 8px;
+      transition: color var(--transition-speed);
+    }
+
+    .bio-card-right .bio-linkedin:hover {
+      color: var(--gold);
+    }
+
+    .bio-nav-buttons {
+      position: absolute;
+      right: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bio-nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-speed);
+    }
+
+    .bio-nav-btn:hover {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .bio-thumbs {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .bio-thumb {
+      width: 50px;
+      height: 56px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background: linear-gradient(135deg, #8899BB, #667799);
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity var(--transition-speed);
+    }
+
+    .bio-thumb:hover {
+      opacity: 0.8;
+    }
+
+    .bio-thumb.active {
+      opacity: 1;
+      outline: 2px solid var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .bio-card {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-card-left {
+        min-height: 200px;
+        clip-path: none;
+      }
+
+      .bio-nav-buttons {
+        right: 8px;
+        top: 8px;
+        transform: none;
+        flex-direction: row;
+      }
+
+      .bio-overlay {
+        padding: 16px;
+      }
+
+      .bio-modal-wrap {
+        max-width: 100%;
+      }
+    }
+
+    /* ==========================================================
+       PROCESS CAROUSEL
+       ========================================================== */
+    .process-carousel {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .process-phase {
+      display: none;
+    }
+
+    .process-phase.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .process-header {
+      background: var(--gold);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .process-body {
+      background: #f8f8fc;
+      padding: 28px;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      border: 1px solid #e0e0e8;
+      border-top: none;
+    }
+
+    .process-body h4 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      margin-top: 12px;
+    }
+
+    .process-body h4:first-child {
+      margin-top: 0;
+    }
+
+    .process-body p,
+    .process-body li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .process-body ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .process-body ul li {
+      margin-bottom: 4px;
+    }
+
+    .process-dots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .process-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: background var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .process-dot:hover {
+      transform: scale(1.2);
+    }
+
+    .process-dot.active {
+      background: var(--gold);
+    }
+
+    /* ==========================================================
+       INSIGHTS FILTER & GRID
+       ========================================================== */
+    .filter-tabs {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-tab {
+      padding: 8px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 2px solid #ddd;
+      background: #fff;
+      transition: all var(--transition-speed);
+      color: var(--text-dark);
+      user-select: none;
+    }
+
+    .filter-tab.active,
+    .filter-tab:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .insight-card {
+      border-top: 3px dotted var(--gold);
+      border-bottom: 3px dotted var(--gold);
+      padding: 24px 0;
+      transition: transform var(--transition-speed);
+    }
+
+    .insight-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .insight-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
+
+    .insight-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .insight-card.hidden {
+      display: none;
+    }
+
+    @media (max-width: 992px) {
+      .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       BLOG POST LAYOUT
+       ========================================================== */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 60% 35%;
+      gap: 5%;
+      align-items: start;
+    }
+
+    .blog-sidebar {
+      background: #f8f8fc;
+      border-radius: 8px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e8e8f0;
+    }
+
+    .blog-sidebar img {
+      margin: 0 auto 16px;
+    }
+
+    .blog-sidebar .sidebar-stripe {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      background: var(--gold);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .blog-sidebar p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       FOUR-COLUMN LAYOUT
+       ========================================================== */
+    .four-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .four-cols h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .four-cols p,
+    .four-cols li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .four-cols ul {
+      padding-left: 16px;
+      list-style: disc;
+    }
+
+    .four-cols ul li {
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 992px) {
+      .four-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .four-cols {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       VALUE CARDS (Difference page)
+       ========================================================== */
+    .value-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .value-card {
+      padding: 28px;
+      border: 1px solid #e0e0e8;
+      border-radius: 8px;
+      border-top: 3px solid var(--gold);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .value-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .value-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================
+       MISCELLANEOUS COMPONENTS
+       ========================================================== */
+    /* Gold circle icon */
+    .gold-circle-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    /* Numbered items (About page trust principles) */
+    .numbered-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .numbered-item .num {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .numbered-item .arrow {
+      color: var(--gold);
+      font-weight: 700;
+      margin: 0 8px;
+    }
+
+    /* Gold underline heading */
+    .gold-underline-heading {
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Knowledge section (For Sellers blue section) */
+    .knowledge-section .gold-sub {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 16px;
+      margin-bottom: 6px;
+    }
+
+    .knowledge-section ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .knowledge-section ul li {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    /* Leadership preview hexagons */
+    .leadership-preview-hex {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin: 24px 0;
+    }
+
+    .leadership-preview-hex .hex-wrap {
+      width: 120px;
+      height: 135px;
+    }
+
+    /* Contact form specific */
+    .contact-form {
+      max-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 0;
+    }
+
+    /* ==========================================================
+       ANIMATIONS & TRANSITIONS
+       ========================================================== */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mobile-menu.open {
+      animation: slideDown 0.3s ease;
+    }
+
+    /* ==========================================================
+       PRINT STYLES
+       ========================================================== */
+    @media print {
+      #site-header,
+      .hero-right,
+      .hero-bar,
+      .lets-talk-section,
+      #site-footer,
+      .bio-overlay {
+        display: none !important;
+      }
+
+      .page {
+        display: block !important;
+      }
+
+      body {
+        color: #000;
+        background: #fff;
+      }
+    }
+
+    /* ==========================================================
+       HOME PAGE REDESIGN — PIXEL PERFECT
+       ========================================================== */
+
+    /* --- HP Hero --- */
+    .hp-hero {
+      position: relative;
+      width: 100%;
+      min-height: 680px;
+      overflow: hidden;
+    }
+
+    .hp-hero-photo {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center 55%;
+      z-index: 1;
+    }
+
+    .hp-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      background-repeat: repeat;
+      background-position: top center;
+      clip-path: polygon(42% 0%, 100% 0%, 100% 100%, 54% 100%);
+      z-index: 2;
+      opacity: 0.88;
+    }
+
+    /* Gold diagonal bar along the pattern edge */
+    .hp-hero-goldbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      pointer-events: none;
+      clip-path: polygon(41.5% 0%, 42.8% 0%, 54.8% 100%, 53.5% 100%);
+      background: var(--gold);
+    }
+
+    .hp-hero-accent {
+      position: absolute;
+      top: 30px;
+      left: 38%;
+      width: 14px;
+      height: 14px;
+      z-index: 4;
+    }
+
+    .hp-hero-content {
+      position: relative;
+      z-index: 5;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 100px 80px 100px 24px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hp-hero-text {
+      max-width: 460px;
+      text-align: left;
+    }
+
+    .hp-hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: 5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+
+    .hp-hero-text h1 .gold {
+      color: var(--gold);
+    }
+
+    .hp-hero-text h1 sup {
+      font-size: 0.4em;
+      vertical-align: super;
+    }
+
+    .hp-hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hp-hero-bullets li {
+      color: #fff;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hp-hero-bullets li img {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Gold thin line at very top of hero */
+    .hp-hero-topline {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold);
+      z-index: 6;
+    }
+
+    @media (max-width: 768px) {
+      .hp-hero {
+        min-height: 380px;
+      }
+      .hp-hero-overlay {
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 30% 100%);
+      }
+      .hp-hero-goldbar {
+        clip-path: polygon(13% 0%, 17% 0%, 32% 100%, 28% 100%);
+      }
+      .hp-hero-content {
+        padding: 50px 24px;
+      }
+      .hp-hero-text h1 {
+        font-size: 2.8rem;
+      }
+      .hp-hero-accent {
+        display: none;
+      }
+    }
+
+    /* --- HP Intro --- */
+    .hp-intro {
+      padding: 48px 0;
+      background: #fff;
+    }
+
+    .hp-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hp-intro-grid h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--navy);
+    }
+
+    .hp-intro-grid h3 strong {
+      font-weight: 700;
+    }
+
+    .hp-intro-divider {
+      width: 2px;
+      height: 60px;
+      border-left: 2px dotted var(--gold);
+    }
+
+    .hp-intro-grid p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hp-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .hp-intro-divider {
+        width: 60px;
+        height: 2px;
+        border-left: none;
+        border-top: 2px dotted var(--gold);
+        margin: 0 auto;
+      }
+    }
+
+    /* --- HP Diamond Cards --- */
+    .hp-cards-section {
+      padding: 20px 0 60px;
+      background: #fff;
+    }
+
+    .hp-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .hp-card {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hp-card-visual {
+      position: relative;
+      width: 100%;
+      padding-top: 88%;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .hp-card-diamond {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 88%;
+      z-index: 2;
+    }
+
+    .hp-card-diamond img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.15 / 1;
+      object-fit: cover;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    /* Navy accent diamond - peeks from bottom-right of left card */
+    .hp-card--navy .hp-card-visual::before {
+      content: '';
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(calc(-50% + 3.5%), calc(-50% + 3.5%));
+      width: 88%;
+      aspect-ratio: 1.15 / 1;
+      background: var(--navy);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      z-index: 1;
+    }
+
+    .hp-card--navy .hp-card-visual::after {
+      display: none;
+    }
+
+    /* Gold accent diamond - peeks from bottom-left of right card */
+    .hp-card--gold .hp-card-visual::before {
+      content: '';
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(calc(-50% - 3.5%), calc(-50% + 3.5%));
+      width: 88%;
+      aspect-ratio: 1.15 / 1;
+      background: var(--gold);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      z-index: 1;
+    }
+
+    .hp-card--gold .hp-card-visual::after {
+      display: none;
+    }
+
+    /* Corner accent photos - hidden for clean look */
+    .hp-card-corner {
+      display: none;
+    }
+
+    .hp-card-corner--tl,
+    .hp-card-corner--tr {
+      display: none;
+    }
+
+    /* Card text area - 2 column layout like PDF */
+    .hp-card-text {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto 1fr;
+      gap: 4px 16px;
+      align-items: start;
+      padding: 0 8px;
+      flex: 1;
+    }
+
+    .hp-card-title {
+      grid-column: 1;
+    }
+
+    .hp-card-title .for-label {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .hp-card-title .for-label::after {
+      content: '';
+      display: block;
+      border-bottom: 2px dotted var(--gold);
+      margin: 6px 0 8px;
+    }
+
+    .hp-card-title h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .hp-card-desc {
+      grid-column: 2;
+      grid-row: 1 / 3;
+    }
+
+    .hp-card-desc p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .hp-card-btn {
+      grid-column: 1 / -1;
+      text-align: center;
+      align-self: end;
+      padding-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .hp-cards {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hp-card-text {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hp-card-desc {
+        grid-column: 1;
+        grid-row: auto;
+      }
+    }
+
+    /* --- HP Sells Difference (upper blue part) --- */
+    .hp-diff-top {
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      background-repeat: repeat;
+      background-position: top center;
+      padding: 60px 0 60px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hp-diff-top .pill-outline::after {
+      background: var(--navy);
+    }
+
+    .hp-diff-top .pill-outline {
+      color: #fff;
+    }
+
+    .hp-diff-top h2 {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .hp-diff-top h2 em {
+      font-style: italic;
+    }
+
+    .hp-diff-top h2 img {
+      height: 44px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 8px;
+    }
+
+    .hp-diff-top .trust-diagram {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hp-diff-desc {
+      max-width: 700px;
+      margin: 30px auto 24px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .hp-diff-btn {
+      display: inline-block;
+    }
+
+    /* --- HP Photo Band --- */
+    .hp-photo-band {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hp-photo-band img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .hp-photo-band {
+        height: 180px;
+      }
+    }
+
+    /* --- HP Industries (white bg with blue accents) --- */
+    .hp-industries {
+      background: #fff;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hp-industries::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      clip-path: polygon(0 0, 100% 20%, 40% 100%, 0 100%);
+      z-index: 0;
+    }
+
+    .hp-industries::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 180px;
+      height: 100%;
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 80%);
+      z-index: 0;
+    }
+
+    .hp-industries .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 260px 1fr 1fr;
+      gap: 24px 40px;
+      align-items: start;
+    }
+
+    .hp-industries-left h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .hp-industries-left p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hp-industries-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hp-industries-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      break-inside: avoid;
+      line-height: 1.4;
+    }
+
+    .hp-industries-list li img {
+      width: 8px;
+      height: 8px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hp-industries::before,
+      .hp-industries::after {
+        display: none;
+      }
+      .hp-industries .container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* --- HP Stats --- */
+    .hp-stats {
+      background: var(--navy);
+      padding: 50px 0;
+      position: relative;
+    }
+
+    .hp-stats::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gold);
+    }
+
+    .hp-stats-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hp-stat {
+      background: none;
+      padding: 20px 28px;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+      border-right: 2px dotted var(--gold);
+    }
+
+    .hp-stat:last-child {
+      border-right: none;
+    }
+
+    .hp-stat-num {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .hp-stat-label {
+      font-size: 0.82rem;
+      color: #fff;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .hp-stat {
+        min-width: 45%;
+        flex: 0 0 45%;
+        border-right: none;
+        border-bottom: 2px dotted var(--gold);
+        padding: 16px 12px;
+      }
+      .hp-stat:last-child {
+        border-bottom: none;
+      }
+    }
+
+    /* --- HP Services --- */
+    .hp-services {
+      background: #fff;
+      padding: 40px 0 60px;
+    }
+
+    .hp-services-ornament {
+      text-align: center;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .hp-services-ornament::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120px;
+      height: 2px;
+      border-top: 2px dotted var(--gold);
+    }
+
+    .hp-services-ornament img {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      padding: 0 8px;
+    }
+
+    .hp-services > .container > h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hp-services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .hp-svc-card {
+      text-align: center;
+      padding: 0 8px;
+      border-top: 3px dotted var(--gold);
+      padding-top: 24px;
+    }
+
+    .hp-svc-card .icon-wrap {
+      margin-bottom: 16px;
+    }
+
+    .hp-svc-card .icon-wrap img {
+      height: 70px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .hp-svc-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-family: var(--font-heading);
+    }
+
+    .hp-svc-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+      .hp-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hp-services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- HP Let's Talk --- */
+    .hp-letstalk {
+      background: var(--navy);
+      padding: 60px 0;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hp-letstalk-grid {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hp-letstalk-photo {
+      position: relative;
+    }
+
+    .hp-letstalk-photo img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    /* Gold triangle accent top-right of photo */
+    .hp-letstalk-photo::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 50%;
+      height: 50%;
+      background: var(--gold);
+      clip-path: polygon(30% 0, 100% 0, 100% 70%);
+      z-index: 1;
+    }
+
+    /* Gold triangle accent bottom-left of photo */
+    .hp-letstalk-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      width: 40%;
+      height: 40%;
+      background: var(--gold);
+      clip-path: polygon(0 30%, 70% 100%, 0 100%);
+      z-index: 1;
+    }
+
+    .hp-letstalk-right {
+      text-align: center;
+    }
+
+    .hp-letstalk-right h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .hp-letstalk-right > p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hp-letstalk-right .form-grid {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .hp-letstalk-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hp-letstalk-photo {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header id="site-header">
+    <!-- Row 1: Logo + Careers + Contact + Hamburger -->
+    <div class="nav-row1">
+      <a href="#/" class="nav-logo">
+        <img src="images/logos/sells-logo-horizontal.png" alt="Sells Advisory">
+      </a>
+      <div class="nav-row1-right">
+        <a href="#/careers" class="careers-link">Careers</a>
+        <a href="#/contact" class="pill pill-outline">Contact</a>
+        <div class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Centered nav links with gold diamond separators -->
+    <nav class="nav-row2" id="desktopNav">
+      <a href="#/for-sellers" data-nav="for-sellers">For Sellers</a>
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/for-buyers" data-nav="for-buyers">For Buyers</a>
+      <span class="nav-diamond">&#9670;</span>
+      <div class="nav-dropdown">
+        <a href="#/company" data-nav="company">Company</a>
+        <div class="dropdown-menu">
+          <a href="#/difference">The Sells Difference</a>
+          <a href="#/leadership">Leadership Team</a>
+        </div>
+      </div>
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/insights" data-nav="insights">Insights</a>
+    </nav>
+
+    <!-- Gold dotted line below nav -->
+    <div class="nav-dotted"></div>
+
+    <!-- Mobile slide-down menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#/for-sellers" onclick="closeMobileMenu()">For Sellers</a>
+      <a href="#/for-buyers" onclick="closeMobileMenu()">For Buyers</a>
+      <a href="#/company" onclick="closeMobileMenu()">Company</a>
+      <div class="mobile-sub">
+        <a href="#/difference" onclick="closeMobileMenu()">The Sells Difference</a>
+        <a href="#/leadership" onclick="closeMobileMenu()">Leadership Team</a>
+      </div>
+      <a href="#/insights" onclick="closeMobileMenu()">Insights</a>
+      <a href="#/careers" onclick="closeMobileMenu()">Careers</a>
+      <a href="#/contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HOME PAGE (#/ or empty hash)
+       ============================================================ -->
+  <div class="page" id="page-home" data-nav="home">
+
+    <!-- === HERO === -->
+    <section class="hp-hero">
+      <div class="hp-hero-photo" style="background-image: url('images/photos/hero-bg.png')"></div>
+      <div class="hp-hero-overlay"></div>
+      <div class="hp-hero-goldbar"></div>
+      <div class="hp-hero-topline"></div>
+      <img src="images/patterns/diamond.png" alt="" class="hp-hero-accent">
+      <div class="hp-hero-content">
+        <div class="hp-hero-text">
+          <h1>Trust <span class="gold">Sells</span><sup>&trade;</sup></h1>
+          <ul class="hp-hero-bullets">
+            <li>
+              <img src="images/patterns/diamond.png" alt="">
+              Protect Your Priorities.
+            </li>
+            <li>
+              <img src="images/patterns/diamond.png" alt="">
+              Preserve Your Legacy.
+            </li>
+            <li>
+              <img src="images/patterns/diamond.png" alt="">
+              Partner with Sells.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === INTRO === -->
+    <section class="hp-intro">
+      <div class="container hp-intro-grid">
+        <div>
+          <h3>
+            <strong>Sells</strong> is the middle-market
+            investment bank and advisory
+            firm people trust.
+          </h3>
+        </div>
+        <div class="hp-intro-divider"></div>
+        <div>
+          <p>
+            We introduce founders and owners of private businesses to the right people, resources,
+            and opportunities&mdash;creating an environment of trust that fosters open conversations
+            and mutually rewarding interactions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === DIAMOND CARDS === -->
+    <section class="hp-cards-section">
+      <div class="container">
+        <div class="hp-cards">
+
+          <!-- Card: For Private Companies -->
+          <div class="hp-card hp-card--navy">
+            <div class="hp-card-visual">
+              <div class="hp-card-corner hp-card-corner--tl" style="background-image: url('images/photos/hero-bg.png')"></div>
+              <div class="hp-card-corner hp-card-corner--tr" style="background-image: url('images/photos/warehouse-exterior.png')"></div>
+              <div class="hp-card-diamond">
+                <img src="images/photos/card-companies.png" alt="For Private Companies">
+              </div>
+            </div>
+            <div class="hp-card-text">
+              <div class="hp-card-title">
+                <div class="for-label">For</div>
+                <h3>Private<br>Companies</h3>
+              </div>
+              <div class="hp-card-desc">
+                <p>
+                  Shareholders and leadership teams trust Sells to
+                  guide them through their defining moments. We
+                  partner with operators who care deeply about
+                  the people, relationships, and cultures they&rsquo;ve
+                  nurtured&mdash;ensuring confidence, fulfillment, and
+                  optimism long after an investment or transaction.
+                </p>
+              </div>
+              <div class="hp-card-btn">
+                <a href="#/for-sellers" class="pill pill-gold">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: For Investors -->
+          <div class="hp-card hp-card--gold">
+            <div class="hp-card-visual">
+              <div class="hp-card-corner hp-card-corner--tl" style="background-image: url('images/photos/warehouse-exterior.png')"></div>
+              <div class="hp-card-corner hp-card-corner--tr" style="background-image: url('images/photos/hero-bg.png')"></div>
+              <div class="hp-card-diamond">
+                <img src="images/photos/card-investors.png" alt="For Investors">
+              </div>
+            </div>
+            <div class="hp-card-text">
+              <div class="hp-card-title">
+                <div class="for-label">For</div>
+                <h3>Investors</h3>
+              </div>
+              <div class="hp-card-desc">
+                <p>
+                  Investors trust Sells to cultivate relationships
+                  with informed, committed operators who want
+                  to pursue their futures and preserve their
+                  legacies. We work with esteemed, principled
+                  investors and sponsors who value strategic
+                  alignment, transparency, and efficiency.
+                </p>
+              </div>
+              <div class="hp-card-btn">
+                <a href="#/for-buyers" class="pill pill-gold">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === THE SELLS DIFFERENCE === -->
+    <section class="hp-diff-top">
+      <div class="container">
+        <h2>
+          The
+          <img src="images/logos/sells-symbol-white.png" alt="Sells">
+          Sells<sup>&trade;</sup> <em>Difference</em>
+        </h2>
+        <img src="images/graphics/trust-diamond-dark.png"
+             alt="The Sells Difference — Seller, Trust, Buyer, Empathy, Alignment, Process, Rewarding Outcomes"
+             class="trust-diagram">
+        <p class="hp-diff-desc">
+          When empathy for sellers, alignment with buyers, and a transparent, efficient process
+          combine, it looks like no other advisory firm&mdash;and performs like nothing else.
+        </p>
+        <a href="#/difference" class="pill pill-gold hp-diff-btn">See the Difference</a>
+      </div>
+    </section>
+
+    <!-- === PHOTO BAND === -->
+    <div class="hp-photo-band">
+      <img src="images/photos/industries-band.png" alt="Industries">
+    </div>
+
+    <!-- === INDUSTRIES === -->
+    <section class="hp-industries">
+      <div class="container">
+        <div class="hp-industries-left">
+          <img src="images/patterns/diamond.png" alt="" style="width: 16px; margin-bottom: 12px;">
+          <h2>Industries</h2>
+          <p>
+            Each business is unique&mdash;and so are the people and
+            stories behind them. Through personal experience,
+            over hundreds of transactions, the Sells team has
+            learned the ins and outs of M&amp;A across a wide range
+            of industries, including:
+          </p>
+        </div>
+        <div>
+          <ul class="hp-industries-list">
+            <li><img src="images/patterns/diamond.png" alt=""> Aerospace &amp; Defense</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Agriculture</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Automotive</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Building Products</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Business Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Chemicals</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Computers</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Distribution</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Education &amp; Training</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Electronics</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Energy</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Engineering Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Environmental</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Facility Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Financial Services</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="hp-industries-list">
+            <li><img src="images/patterns/diamond.png" alt=""> Food &amp; Beverage</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Foodservice</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Healthcare Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Industrial Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Life Sciences</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Manufacturing</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Media &amp; Marketing</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Medical Products</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Packaging</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Precision Machining</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Regulatory Compliance</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Safety</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Software &amp; Technology</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Transportation Services</li>
+            <li><img src="images/patterns/diamond.png" alt=""> Water &amp; Wastewater</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- === STATS BAR === -->
+    <section class="hp-stats">
+      <div class="container">
+        <div class="hp-stats-row">
+          <div class="hp-stat">
+            <div class="hp-stat-num">$3B+</div>
+            <div class="hp-stat-label">investment<br>track record</div>
+          </div>
+          <div class="hp-stat">
+            <div class="hp-stat-num">20+</div>
+            <div class="hp-stat-label">seasoned<br>professionals</div>
+          </div>
+          <div class="hp-stat">
+            <div class="hp-stat-num">100+</div>
+            <div class="hp-stat-label">professional<br>&amp; advisor<br>network</div>
+          </div>
+          <div class="hp-stat">
+            <div class="hp-stat-num">40&ndash;90<br>days</div>
+            <div class="hp-stat-label">average due<br>diligence<br>before closing</div>
+          </div>
+          <div class="hp-stat">
+            <div class="hp-stat-num">91 days</div>
+            <div class="hp-stat-label">fastest<br>transaction<br>from initial<br>call to close</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SERVICES === -->
+    <section class="hp-services">
+      <div class="container">
+        <div class="hp-services-ornament">
+          <img src="images/patterns/diamond.png" alt="" style="width: 14px; height: 14px;">
+        </div>
+        <h2>Services</h2>
+        <div class="hp-services-grid">
+
+          <div class="hp-svc-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-sell-side.png" alt="Sell-Side Advisory">
+            </div>
+            <h4>Sell-Side Advisory</h4>
+            <p>
+              Sells was founded on putting founders first. Operators trust
+              Sells to guide pre-transaction growth, maintain relationships,
+              with leading strategic investors, and actually close transactions.
+            </p>
+            <a href="#/for-sellers" class="pill pill-outline">Learn More</a>
+          </div>
+
+          <div class="hp-svc-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-buy-side.png" alt="Buy-Side Advisory">
+            </div>
+            <h4>Buy-Side Advisory</h4>
+            <p>
+              Sells supports seasoned investors in identifying aligned
+              entrepreneurs&mdash;navigating complex transactions and
+              negotiating based on exclusive insight&mdash;so both parties can
+              unlock the full potential in each investment.
+            </p>
+            <a href="#/for-buyers" class="pill pill-outline">Learn More</a>
+          </div>
+
+          <div class="hp-svc-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-strategic-prep.png" alt="Strategic Preparation">
+            </div>
+            <h4>Strategic Preparation</h4>
+            <p>
+              Throughout the journey, founders get expert guidance on operations,
+              balance sheet and entity restructuring, tax planning,
+              wealth management, and much more&mdash;helping entrepreneurs
+              create immediate and lasting value.
+            </p>
+            <a href="#/for-sellers" class="pill pill-outline">Learn More</a>
+          </div>
+
+          <div class="hp-svc-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-transaction-mgt.png" alt="Transaction Management">
+            </div>
+            <h4>Transaction Management</h4>
+            <p>
+              We quarterback every aspect of a transaction&mdash;from financial and
+              legal to personal and cultural&mdash;so all parties can focus on
+              leveraging their strengths to create real value.
+            </p>
+            <a href="#/for-buyers" class="pill pill-outline">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest,
+            straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective
+            transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       FOR SELLERS PAGE (#/for-sellers)
+       ============================================================ -->
+  <div class="page" id="page-for-sellers" data-nav="for-sellers">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>For Sellers</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container two-col">
+        <div>
+          <h3 class="section-heading">
+            It&rsquo;s your business, and we take it personally.
+          </h3>
+          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
+            Sells specializes in mergers and acquisitions for middle-market, privately held 
+            businesses. We are trusted advisors to founders and ownership groups who want to 
+            protect their people, preserve their legacies, and achieve the very best transaction 
+            outcomes.
+          </p>
+          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
+            Our team brings decades of experience in investment banking, private equity, and 
+            entrepreneurship&mdash;combining investor-level insight with a people-first approach 
+            that puts your interests at the center of every decision.
+          </p>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === WHEN THE TIME IS RIGHT === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container text-center">
+        <h2 class="section-heading">When the time is right, you&rsquo;ll be ready.</h2>
+        <p style="max-width: 700px; margin: 0 auto 32px; color: var(--text-muted); line-height: 1.7;">
+          Whether you're planning for retirement, seeking growth capital, or exploring a full 
+          or partial exit, Sells helps you prepare for and navigate life's most important 
+          business decisions.
+        </p>
+        <div class="four-cols" style="text-align: left;">
+
+          <div>
+            <div class="gold-circle-icon">&#9670;</div>
+            <h4 class="text-center">Retirement Planning</h4>
+            <ul>
+              <li>Succession planning</li>
+              <li>Legacy preservation</li>
+              <li>Wealth management coordination</li>
+              <li>Tax-optimized exit strategies</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="gold-circle-icon">&#9670;</div>
+            <h4 class="text-center">Growth Capital</h4>
+            <ul>
+              <li>Strategic investment sourcing</li>
+              <li>Recapitalization options</li>
+              <li>Partnership structuring</li>
+              <li>Valuation optimization</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="gold-circle-icon">&#9670;</div>
+            <h4 class="text-center">Business Exit</h4>
+            <ul>
+              <li>Full sale preparation</li>
+              <li>Competitive buyer processes</li>
+              <li>Deal structuring &amp; negotiation</li>
+              <li>Post-transaction support</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="gold-circle-icon">&#9670;</div>
+            <h4 class="text-center">Partial Cash-out</h4>
+            <ul>
+              <li>Minority recapitalization</li>
+              <li>Dividend recaps</li>
+              <li>Maintain operational control</li>
+              <li>De-risk personal wealth</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === KNOWLEDGE COUNTS === -->
+    <section class="section-blue knowledge-section">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff; line-height: 1.3;">
+            Knowledge counts.<br>
+            Experience matters.<br>
+            <span class="text-gold">Trust Sells.</span>
+          </h2>
+        </div>
+        <div>
+          <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; line-height: 1.7;">
+            We combine deep industry expertise with a values-driven approach to deliver 
+            outcomes that protect what matters most.
+          </p>
+
+          <div class="gold-sub">Putting People First</div>
+          <ul>
+            <li>We listen before we advise, building relationships grounded in empathy and respect</li>
+            <li>Your team, your culture, and your community are priorities&mdash;not afterthoughts</li>
+            <li>Every engagement is personal, because your business is personal</li>
+          </ul>
+
+          <div class="gold-sub">Optimizing Opportunity</div>
+          <ul>
+            <li>Investor-level analysis to identify and articulate your company's full value</li>
+            <li>Strategic positioning to attract the right partners and maximize terms</li>
+            <li>Proprietary relationships with leading private equity firms and strategic acquirers</li>
+          </ul>
+
+          <div class="gold-sub">Guiding the Process</div>
+          <ul>
+            <li>End-to-end transaction management from preparation through close</li>
+            <li>Coordination of legal, financial, tax, and operational workstreams</li>
+            <li>Transparent communication at every stage so there are no surprises</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- === THE SELLS PROCESS === -->
+    <section class="section-white">
+      <div class="container text-center">
+        <h2 class="section-heading">
+          The 
+          <img src="images/logos/sells-symbol.png" alt="Sells" 
+               style="height: 36px; display: inline-block; vertical-align: middle; margin: 0 4px;"> 
+          Sells&trade; Process
+        </h2>
+        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 8px auto 24px;">
+
+        <div class="process-carousel">
+
+          <!-- Phase 1 -->
+          <div class="process-phase active" data-phase="0">
+            <div class="process-header">
+              Phase 1: Preparation &amp; Positioning &mdash; Weeks 1&ndash;4
+            </div>
+            <div class="process-body">
+              <h4>What to expect:</h4>
+              <ul>
+                <li>Comprehensive business review and valuation analysis</li>
+                <li>Financial model development and quality of earnings preparation</li>
+                <li>Marketing materials: Confidential Information Memorandum (CIM), executive summary, and teaser</li>
+                <li>Buyer universe development and strategic targeting</li>
+                <li>Entity and tax structure review with your advisors</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="process-phase" data-phase="1">
+            <div class="process-header">
+              Phase 2: Market Outreach &mdash; Weeks 5&ndash;8
+            </div>
+            <div class="process-body">
+              <h4>What to expect:</h4>
+              <ul>
+                <li>Confidential outreach to pre-qualified strategic and financial buyers</li>
+                <li>Management of Non-Disclosure Agreements (NDAs)</li>
+                <li>Distribution of marketing materials and data room access</li>
+                <li>Facilitation of management presentations and site visits</li>
+                <li>Collection and analysis of Indications of Interest (IOIs)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="process-phase" data-phase="2">
+            <div class="process-header">
+              Phase 3: Due Diligence &amp; Negotiations &mdash; Weeks 9&ndash;16
+            </div>
+            <div class="process-body">
+              <h4>What to expect:</h4>
+              <ul>
+                <li>Coordination of financial, legal, operational, and environmental due diligence</li>
+                <li>Negotiation of Letter of Intent (LOI) terms</li>
+                <li>Purchase agreement drafting and redlining</li>
+                <li>Working capital and adjustment mechanism negotiations</li>
+                <li>Employment, non-compete, and transition planning</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="process-phase" data-phase="3">
+            <div class="process-header">
+              Phase 4: Close &amp; Transition &mdash; Weeks 16&ndash;20
+            </div>
+            <div class="process-body">
+              <h4>What to expect:</h4>
+              <ul>
+                <li>Final purchase agreement execution</li>
+                <li>Funds flow coordination and closing mechanics</li>
+                <li>Transition planning support and communication strategy</li>
+                <li>Post-closing adjustment management</li>
+                <li>Ongoing relationship and advisory support</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase navigation dots -->
+          <div class="process-dots">
+            <span class="process-dot active" data-phase="0" onclick="showPhase(0)"></span>
+            <span class="process-dot" data-phase="1" onclick="showPhase(1)"></span>
+            <span class="process-dot" data-phase="2" onclick="showPhase(2)"></span>
+            <span class="process-dot" data-phase="3" onclick="showPhase(3)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === RIGHT PEOPLE === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container two-col-55-45">
+        <div>
+          <h3 class="section-heading">
+            The right people, right when you need them.
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Sells coordinates a network of specialized professionals to support every 
+            aspect of your transaction, ensuring nothing is overlooked.
+          </p>
+          <hr class="gold-dotted">
+          <ul class="right-people-list">
+            <li>Accounting</li>
+            <li>Tax Counsel</li>
+            <li>Financial Diligence</li>
+            <li>General Counsel</li>
+            <li>Legal Transaction</li>
+            <li>Private Wealth Management</li>
+          </ul>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === TESTIMONIAL === -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-marks">&ldquo;</div>
+        <p class="testimonial-quote">
+          This is where a short and powerful client testimony would go to talk about 
+          the success that Sells has helped this Founder during an M&amp;A process.
+        </p>
+        <p class="testimonial-author">Peter Parker</p>
+        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help. Reach out to start a confidential conversation.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       FOR BUYERS PAGE (#/for-buyers)
+       ============================================================ -->
+  <div class="page" id="page-for-buyers" data-nav="for-buyers">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>For Buyers</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container two-col">
+        <div>
+          <h3 class="section-heading">
+            Investors: This is your story, too.
+          </h3>
+          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
+            At Sells, we believe the best transactions happen when buyers and sellers 
+            share a common vision. We work with experienced investors and sponsors who 
+            understand that behind every business is a founder, a team, and a community 
+            worth protecting.
+          </p>
+          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
+            Our approach is built on trust, transparency, and alignment&mdash;connecting 
+            you with opportunities that match your investment thesis and values, while 
+            providing the insight and access you need to make confident decisions.
+          </p>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === INVEST IN PEOPLE === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container text-center">
+        <h2 class="section-heading">Invest in people. Invest with purpose.</h2>
+        <p style="max-width: 700px; margin: 0 auto 32px; color: var(--text-muted); line-height: 1.7;">
+          The investors we partner with share our commitment to principled, people-centered 
+          transactions. Here's what sets our buyer relationships apart.
+        </p>
+        <div class="four-cols" style="text-align: left;">
+
+          <div>
+            <h4 class="gold-underline-heading">Aligned</h4>
+            <ul>
+              <li>Shared vision for the company's future</li>
+              <li>Cultural compatibility with founders and teams</li>
+              <li>Commitment to preserving legacies and communities</li>
+              <li>Long-term partnership mindset over short-term returns</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="gold-underline-heading">Strategic</h4>
+            <ul>
+              <li>Clear investment thesis and sector expertise</li>
+              <li>Value-creation plans that benefit all stakeholders</li>
+              <li>Operational resources to support growth post-close</li>
+              <li>Network of portfolio companies for synergies</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="gold-underline-heading">Ethical</h4>
+            <ul>
+              <li>Transparent communication throughout the process</li>
+              <li>Fair and straightforward deal structures</li>
+              <li>Respect for the seller's timeline and priorities</li>
+              <li>Reputation for integrity in the market</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="gold-underline-heading">Proven</h4>
+            <ul>
+              <li>Track record of successful acquisitions and exits</li>
+              <li>Experienced operating and management teams</li>
+              <li>Strong references from founders and management</li>
+              <li>Committed capital and efficient closing processes</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === WHY BUYERS TRUST SELLS === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container two-col">
+        <div class="photo-placeholder" style="min-height: 350px;">
+          Photo placeholder
+        </div>
+        <div>
+          <h3 class="section-heading">Why buyers trust Sells:</h3>
+          <p style="color: var(--text-muted); margin-bottom: 12px; line-height: 1.7;">
+            We bring differentiated deal flow, deep seller relationships, and a transparent 
+            process that gives you confidence at every stage.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Our sellers choose to work with Sells because of trust&mdash;and that trust 
+            extends to the buyers and investors we introduce. You gain access to motivated, 
+            prepared sellers and a well-managed process designed to protect everyone's time 
+            and interests.
+          </p>
+
+          <h4 style="color: var(--gold); font-family: var(--font-body); font-weight: 700; margin-top: 20px; margin-bottom: 8px;">
+            Optimizing Opportunity
+          </h4>
+          <ul style="padding-left: 20px; list-style: disc;">
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Proprietary deal flow from trusted seller relationships
+            </li>
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Detailed, investor-ready marketing materials and financial models
+            </li>
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Pre-qualified opportunities aligned with your investment criteria
+            </li>
+          </ul>
+
+          <h4 style="color: var(--gold); font-family: var(--font-body); font-weight: 700; margin-top: 20px; margin-bottom: 8px;">
+            Guiding the Process
+          </h4>
+          <ul style="padding-left: 20px; list-style: disc;">
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Efficient, well-organized due diligence processes
+            </li>
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Direct access to management and key decision-makers
+            </li>
+            <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.5;">
+              Transparent negotiations that build trust and accelerate close
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- === TESTIMONIAL === -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-marks">&ldquo;</div>
+        <p class="testimonial-quote">
+          This is where a short and powerful client testimony would go to talk about 
+          the success that Sells has helped this Founder during an M&amp;A process.
+        </p>
+        <p class="testimonial-author">Peter Parker</p>
+        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help. Reach out to start a confidential conversation.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       ABOUT SELLS PAGE (#/company)
+       ============================================================ -->
+  <div class="page" id="page-company" data-nav="company">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>About Sells</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === SUB-TABS === -->
+    <div class="sub-tabs">
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/difference">The Sells Difference</a>
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/leadership">Leadership Team</a>
+    </div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container">
+        <h3 class="section-heading" style="max-width: 600px;">
+          When it matters most, Trust Sells.
+        </h3>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          Sells Advisory is a middle-market investment bank dedicated to helping founders, 
+          owners, and investors navigate the most important transactions of their lives. We 
+          were founded on a simple but powerful belief: that trust is the foundation of every 
+          successful relationship and transaction.
+        </p>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          Our team brings together decades of experience across investment banking, private 
+          equity, finance, and entrepreneurship. We understand both sides of the table because 
+          we've sat in both seats. That perspective allows us to create an environment where 
+          open conversations lead to exceptional outcomes.
+        </p>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          We don't just close deals&mdash;we guide people through defining moments with care, 
+          expertise, and integrity. Every engagement is built on the principles that define 
+          who we are: empathy for sellers, alignment with buyers, and a process that brings 
+          it all together.
+        </p>
+      </div>
+    </section>
+
+    <!-- === TRUST PRINCIPLES === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container two-col">
+        <div class="photo-placeholder" style="min-height: 350px;">
+          Photo placeholder
+        </div>
+        <div>
+          <h3 class="section-heading">Above all, we value trust.</h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
+            Trust isn't just a word in our name&mdash;it's the foundation of everything we do. 
+            Our approach is built on three core principles that guide every relationship and 
+            transaction.
+          </p>
+
+          <div class="numbered-item">
+            <span class="num">1.</span>
+            <div>
+              <strong>Dignity</strong> 
+              <span class="arrow">&rarr;</span> 
+              <strong class="text-gold">Empathy</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+                We treat every founder, owner, and stakeholder with dignity. By truly understanding 
+                your goals, concerns, and values, we transform that respect into empathy&mdash;the kind 
+                that shapes better advice and better outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div class="numbered-item">
+            <span class="num">2.</span>
+            <div>
+              <strong>Honesty</strong> 
+              <span class="arrow">&rarr;</span> 
+              <strong class="text-gold">Alignment</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+                Honest conversations create alignment between all parties. We provide candid 
+                assessments, transparent communication, and straightforward advice&mdash;because 
+                alignment is only possible when everyone sees the full picture.
+              </p>
+            </div>
+          </div>
+
+          <div class="numbered-item">
+            <span class="num">3.</span>
+            <div>
+              <strong>Integrity</strong> 
+              <span class="arrow">&rarr;</span> 
+              <strong class="text-gold">Process</strong>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+                Integrity in every action builds a process you can count on. From preparation 
+                through close, we manage every detail with the highest ethical standards&mdash;creating 
+                a process that protects your interests at every turn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === LEADERSHIP PREVIEW === -->
+    <section class="section-light">
+      <div class="container text-center">
+        <h2 class="section-heading">Sells&rsquo; Leadership Team</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
+          Meet our leadership team with a combined 50+ years of experience in investment 
+          banking, private equity, and advisory services.
+        </p>
+        <div class="leadership-preview-hex">
+          <div class="hex-wrap"><div class="hex-photo"></div></div>
+          <div class="hex-wrap"><div class="hex-photo"></div></div>
+          <div class="hex-wrap"><div class="hex-photo"></div></div>
+        </div>
+        <a href="#/leadership" class="pill pill-gold" style="margin-top: 16px;">
+          Meet Our Team
+        </a>
+      </div>
+    </section>
+
+    <!-- === RIGHT PEOPLE === -->
+    <section class="section-white">
+      <div class="container two-col-55-45">
+        <div>
+          <h3 class="section-heading">
+            The right people, right when you need them.
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Sells coordinates a network of specialized professionals to support every 
+            aspect of your transaction, ensuring nothing is overlooked.
+          </p>
+          <hr class="gold-dotted">
+          <ul class="right-people-list">
+            <li>Accounting</li>
+            <li>Tax Counsel</li>
+            <li>Financial Diligence</li>
+            <li>General Counsel</li>
+            <li>Legal Transaction</li>
+            <li>Private Wealth Management</li>
+          </ul>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === TESTIMONIAL === -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-marks">&ldquo;</div>
+        <p class="testimonial-quote">
+          This is where a short and powerful client testimony would go to talk about 
+          the success that Sells has helped this Founder during an M&amp;A process.
+        </p>
+        <p class="testimonial-author">Peter Parker</p>
+        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       OUR DIFFERENCE PAGE (#/difference)
+       ============================================================ -->
+  <div class="page" id="page-difference" data-nav="company">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>Our Difference</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === SUB-TABS === -->
+    <div class="sub-tabs">
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/difference" class="active">The Sells Difference</a>
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/leadership">Leadership Team</a>
+    </div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container">
+        <h3 class="section-heading" style="max-width: 600px;">
+          Trust <em>is</em> the process.
+        </h3>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          At Sells, trust isn't just an outcome&mdash;it's woven into every step. From our first 
+          conversation to closing day and beyond, our entire approach is designed to build and 
+          sustain the trust that makes transformative transactions possible.
+        </p>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          Other firms focus on the deal. We focus on the people behind the deal. That distinction 
+          drives everything we do and produces outcomes that look nothing like the rest of the market.
+        </p>
+      </div>
+    </section>
+
+    <!-- === DIAMOND SECTION === -->
+    <section class="section-light-pattern">
+      <div class="container text-center">
+        <h2 class="section-heading">
+          The 
+          <img src="images/logos/sells-symbol.png" alt="Sells" 
+               style="height: 40px; display: inline-block; vertical-align: middle; margin: 0 6px;"> 
+          Sells&trade; Difference
+        </h2>
+        <img src="images/graphics/trust-diamond.png" 
+             alt="The Sells Difference Diamond - Seller/Trust/Buyer/Empathy/Process/Alignment" 
+             style="max-width: 550px; margin: 32px auto;">
+      </div>
+    </section>
+
+    <!-- === 4 VALUE CARDS === -->
+    <section class="section-white">
+      <div class="container">
+        <div class="value-cards">
+
+          <div class="value-card">
+            <h4>Seller <strong>Empathy</strong></h4>
+            <p>
+              We begin every engagement by deeply understanding the seller&mdash;their goals, 
+              their fears, their non-negotiables. By leading with empathy, we create an 
+              environment of psychological safety that allows founders to make their best 
+              decisions with confidence and clarity.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h4>Buyer <strong>Alignment</strong></h4>
+            <p>
+              We cultivate relationships with investors who share our values&mdash;those who 
+              lead with integrity, invest with purpose, and honor the legacies they acquire. 
+              By aligning buyer and seller values from the start, we create partnerships that 
+              endure well beyond the closing table.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h4>Clear <strong>Process</strong></h4>
+            <p>
+              Our process is transparent, efficient, and meticulously managed. From preparation 
+              through close, every step is designed to protect your interests, minimize disruption, 
+              and deliver outcomes that exceed expectations. No surprises, no shortcuts, no gaps.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h4>Rewarding <strong>Outcomes</strong></h4>
+            <p>
+              When empathy, alignment, and process come together, the result is a transaction 
+              that creates lasting value for everyone involved. Our clients don't just close 
+              deals&mdash;they achieve outcomes that protect their people, preserve their legacies, 
+              and open new chapters with optimism.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === FOR SELLERS DELIVERS === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container two-col">
+        <div>
+          <h3 class="section-heading">
+            What the Sells Difference delivers for <span class="text-gold">Sellers</span>:
+          </h3>
+          <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted);">
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              A trusted advisor who understands your business like an insider
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              Investor-level analysis and positioning to maximize value
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              Access to qualified, aligned buyers who share your values
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              A transparent, well-managed process from start to finish
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              Protection for your team, culture, and community
+            </li>
+            <li style="margin-bottom: 8px; line-height: 1.5;">
+              Confidence and fulfillment through your defining moment
+            </li>
+          </ul>
+          <a href="#/for-sellers" class="pill pill-outline" style="margin-top: 16px;">
+            More for Sellers
+          </a>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === FOR BUYERS DELIVERS === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container">
+        <h3 class="section-heading">
+          What the Sells Difference delivers for <span class="text-gold">Buyers</span>:
+        </h3>
+        <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted); max-width: 700px;">
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Differentiated deal flow from trusted seller relationships
+          </li>
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Prepared, motivated sellers with clear expectations
+          </li>
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Comprehensive marketing materials and financial models
+          </li>
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Efficient, well-organized due diligence processes
+          </li>
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Transparent negotiations that build trust and accelerate close
+          </li>
+          <li style="margin-bottom: 8px; line-height: 1.5;">
+            Long-term relationships with a trusted deal source
+          </li>
+        </ul>
+        <a href="#/for-buyers" class="pill pill-outline" style="margin-top: 16px;">
+          More for Buyers
+        </a>
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       LEADERSHIP TEAM PAGE (#/leadership)
+       ============================================================ -->
+  <div class="page" id="page-leadership" data-nav="company">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>Leadership Team</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === SUB-TABS === -->
+    <div class="sub-tabs">
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/difference">The Sells Difference</a>
+      <span class="nav-diamond">&#9670;</span>
+      <a href="#/leadership" class="active">Leadership Team</a>
+    </div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container">
+        <h3 class="section-heading" style="max-width: 600px;">
+          Leading by serving.
+        </h3>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          Our leadership team brings together diverse expertise in investment banking, private 
+          equity, operations, and entrepreneurship. United by shared values and a commitment 
+          to trust-based advisory, they lead by example and serve every client with the care 
+          and dedication that defines Sells.
+        </p>
+      </div>
+    </section>
+
+    <!-- === EXECUTIVE TEAM GRID === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container text-center">
+        <h2 class="section-heading">Executive Team</h2>
+        <hr class="gold-dotted" style="max-width: 400px; margin: 16px auto 32px;">
+
+        <div class="team-grid" id="teamGrid">
+
+          <!-- Tyler Sells -->
+          <div class="team-member" onclick="openBio(0)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Tyler Sells</h4>
+            <p>Founder &amp; CEO</p>
+          </div>
+
+          <!-- David Ibrahim -->
+          <div class="team-member" onclick="openBio(1)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>David Ibrahim</h4>
+            <p>Partner</p>
+          </div>
+
+          <!-- Patrick Sells -->
+          <div class="team-member" onclick="openBio(2)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Patrick Sells</h4>
+            <p>President</p>
+          </div>
+
+          <!-- Taryn Sells -->
+          <div class="team-member" onclick="openBio(3)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Taryn Sells</h4>
+            <p>Chief Marketing Officer</p>
+          </div>
+
+          <!-- Richard Park -->
+          <div class="team-member" onclick="openBio(4)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Richard Park</h4>
+            <p>Chief Revenue Officer</p>
+          </div>
+
+          <!-- Sam Johnson -->
+          <div class="team-member" onclick="openBio(5)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Sam Johnson</h4>
+            <p>Managing Director</p>
+          </div>
+
+          <!-- Mark Gundersen -->
+          <div class="team-member" onclick="openBio(6)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Mark Gundersen</h4>
+            <p>Board of Advisors</p>
+          </div>
+
+          <!-- Dylan Rauchman -->
+          <div class="team-member" onclick="openBio(7)">
+            <div class="hex-wrap">
+              <div class="hex-photo"></div>
+              <div class="hex-overlay">Read Bio</div>
+            </div>
+            <h4>Dylan Rauchman</h4>
+            <p>Board of Advisors</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === RIGHT PEOPLE === -->
+    <section class="section-white">
+      <div class="container two-col-55-45">
+        <div>
+          <h3 class="section-heading">
+            The right people, right when you need them.
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Sells coordinates a network of specialized professionals to support every 
+            aspect of your transaction.
+          </p>
+          <hr class="gold-dotted">
+          <ul class="right-people-list">
+            <li>Accounting</li>
+            <li>Tax Counsel</li>
+            <li>Financial Diligence</li>
+            <li>General Counsel</li>
+            <li>Legal Transaction</li>
+            <li>Private Wealth Management</li>
+          </ul>
+        </div>
+        <div class="photo-placeholder" style="min-height: 300px;">
+          Photo placeholder
+        </div>
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       INSIGHTS PAGE (#/insights)
+       ============================================================ -->
+  <div class="page" id="page-insights" data-nav="insights">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>Insights</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === INTRO === -->
+    <section class="section-white">
+      <div class="container">
+        <h3 class="section-heading" style="max-width: 600px;">
+          Intelligence at your disposal.
+        </h3>
+        <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
+          Stay informed with the latest thinking from Sells Advisory. Our insights cover 
+          market trends, transaction best practices, and strategic perspectives for both 
+          sellers and investors navigating the middle market.
+        </p>
+      </div>
+    </section>
+
+    <!-- === FILTER & GRID === -->
+    <section class="section-white" style="padding-top: 0;">
+      <div class="container">
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs">
+          <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);">Filter by:</span>
+          <img src="images/patterns/diamond.png" alt="" style="width: 10px; height: 10px;">
+          <span class="filter-tab active" data-filter="all">All</span>
+          <span class="filter-tab" data-filter="sellers">Sellers</span>
+          <span class="filter-tab" data-filter="buyers">Buyers</span>
+          <span class="filter-tab" data-filter="news">News</span>
+        </div>
+
+        <!-- Insights grid -->
+        <div class="insights-grid" id="insightsGrid">
+
+          <div class="insight-card" data-category="sellers">
+            <h4>Preparing Your Business for a Successful Transaction</h4>
+            <p>
+              Understanding the key steps founders should take well before going to market 
+              can significantly impact transaction outcomes and valuation multiples.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="buyers">
+            <h4>What Investors Should Look for in a Middle-Market Platform</h4>
+            <p>
+              Identifying the characteristics that distinguish exceptional platform investments 
+              from the rest of the market requires both experience and strategic discipline.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="news">
+            <h4>Sells Advisory Announces Record Quarter for Deal Closings</h4>
+            <p>
+              The firm closed multiple transactions across diverse industries, reinforcing its 
+              position as a leading middle-market advisory firm in the region.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="sellers">
+            <h4>The Importance of Cultural Fit in M&amp;A Transactions</h4>
+            <p>
+              Why founders who prioritize cultural alignment alongside financial terms 
+              consistently report higher satisfaction with their transaction outcomes.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="buyers">
+            <h4>Building Trust with Founders: A Buyer&rsquo;s Guide</h4>
+            <p>
+              How strategic and financial buyers can differentiate themselves in competitive 
+              processes by leading with transparency, empathy, and long-term vision.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="news">
+            <h4>Sells Expands Advisory Team with Key Senior Hires</h4>
+            <p>
+              New additions bring decades of combined experience in investment banking and 
+              private equity, strengthening the firm's capabilities across multiple sectors.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="sellers">
+            <h4>Understanding Quality of Earnings: What Sellers Need to Know</h4>
+            <p>
+              A quality of earnings analysis is one of the most critical components of due 
+              diligence. Here's how sellers can prepare and what to expect during the process.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="buyers">
+            <h4>Navigating the Competitive Landscape in Middle-Market M&amp;A</h4>
+            <p>
+              As deal volume and competition increase, buyers need a differentiated approach 
+              to sourcing, evaluating, and closing transactions in today's environment.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+          <div class="insight-card" data-category="news">
+            <h4>Headline of Post Goes in This Style Above the Summary</h4>
+            <p>
+              This is where an article summary would go to give readers a preview of the 
+              content and encourage them to click through to read the full post.
+            </p>
+            <a href="#/insights/post" class="pill pill-outline" style="font-size: 0.85rem; padding: 8px 20px;">
+              Read More
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       BLOG POST PAGE (#/insights/post)
+       ============================================================ -->
+  <div class="page" id="page-insights-post" data-nav="insights">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>Insights</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === ARTICLE === -->
+    <section class="section-white">
+      <div class="container blog-layout">
+
+        <!-- Article content -->
+        <div>
+          <h2 class="section-heading" style="font-size: 2rem; margin-bottom: 24px;">
+            Title of Blog Post Goes Here Like This on the Page.
+          </h2>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+            pariatur.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+            mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit 
+            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
+            ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
+            quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque 
+            porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
+            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam 
+            aliquam quaerat voluptatem.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit 
+            laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure 
+            reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
+            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+            excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui 
+            officia deserunt mollitia animi, id est laborum et dolorum fuga.
+          </p>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="blog-sidebar">
+            <img src="images/logos/sells-symbol.png" alt="Sells" style="height: 50px; margin: 0 auto 16px;">
+            <hr class="gold-dotted">
+            <p>
+              Interested in learning what Sells can do for you as a Seller? Find out now.
+            </p>
+            <a href="#/for-sellers" class="pill pill-gold" style="font-size: 0.85rem;">
+              Learn More
+            </a>
+            <div class="sidebar-stripe"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- === LET'S TALK === -->
+    <section class="lets-talk-section">
+      <div class="container two-col-40-60">
+        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
+        <div>
+          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
+            Whether you're exploring options, preparing for a transaction, or seeking a 
+            trusted advisor, we're here to help.
+          </p>
+          <form class="form-grid" onsubmit="return handleFormSubmit(event)">
+            <div class="form-fields">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+              <input type="text" placeholder="Title">
+              <input type="text" placeholder="Company*" required>
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <div>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       CONTACT PAGE (#/contact)
+       ============================================================ -->
+  <div class="page" id="page-contact" data-nav="contact">
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="hero-left">
+        <div><h1>Contact Us</h1></div>
+      </div>
+      <div class="hero-right">
+        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        Photo placeholder
+      </div>
+    </section>
+    <div class="hero-gold-line"></div>
+
+    <!-- === CONTACT SECTION === -->
+    <section class="section-white">
+      <div class="container two-col-55-45">
+
+        <!-- Form side -->
+        <div>
+          <h2 class="section-heading text-gold">Let&rsquo;s Talk</h2>
+          <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
+            Ready to start a conversation? Fill out the form below and a member of our 
+            team will be in touch within one business day. All inquiries are treated with 
+            the utmost confidentiality.
+          </p>
+          <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <input type="text" placeholder="First Name*" required>
+              <input type="text" placeholder="Last Name*" required>
+            </div>
+            <input type="text" placeholder="Title" style="width: 100%; margin-top: 12px;">
+            <input type="text" placeholder="Company*" required style="width: 100%; margin-top: 12px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
+              <input type="email" placeholder="Email*" required>
+              <input type="tel" placeholder="Phone*" required>
+            </div>
+            <textarea placeholder="How can we help?" style="width: 100%; margin-top: 12px; min-height: 120px; padding: 12px 14px; background: #f0f0f5; border: none; border-bottom: 2px solid #ccc; font-size: 0.9rem; border-radius: 2px; resize: vertical; font-family: var(--font-body);"></textarea>
+            <div style="margin-top: 16px;">
+              <button type="submit" class="pill pill-gold">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Address side -->
+        <div>
+          <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 16px;">
+            Address
+          </h3>
+          <h4 style="font-weight: 700; margin-bottom: 4px;">Headquarters</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+            5100 W JB Hunt Drive<br>
+            STE 830<br>
+            Rogers, AR 72758
+          </p>
+          <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px;">
+            Office Line
+          </h3>
+          <p>
+            <a href="tel:+14793343226" style="color: var(--gold); font-weight: 600; font-size: 1rem;">
+              +1 (479) 334-3226
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       BIO MODAL OVERLAY
+       ============================================================ -->
+  <div class="bio-overlay" id="bioOverlay">
+    <div class="bio-modal-wrap">
+      <h3 class="bio-modal-title">Executive Team</h3>
+      <div class="bio-card">
+        <div class="bio-card-left"></div>
+        <div class="bio-card-right">
+          <h3 id="bioName"></h3>
+          <p class="bio-title" id="bioTitle"></p>
+          <p id="bioPara1"></p>
+          <p id="bioPara2"></p>
+          <a href="#" class="bio-linkedin" id="bioLinkedin">
+            <span class="linkedin-icon" style="width: 24px; height: 24px; font-size: 0.7rem; display: inline-flex;">in</span>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="bio-nav-buttons">
+        <button class="bio-nav-btn" onclick="closeBio()" title="Close">&times;</button>
+        <button class="bio-nav-btn" onclick="prevBio()" title="Previous">&lt;</button>
+        <button class="bio-nav-btn" onclick="nextBio()" title="Next">&gt;</button>
+      </div>
+      <div class="bio-thumbs" id="bioThumbs">
+        <div class="bio-thumb" onclick="openBio(0)"></div>
+        <div class="bio-thumb" onclick="openBio(1)"></div>
+        <div class="bio-thumb" onclick="openBio(2)"></div>
+        <div class="bio-thumb" onclick="openBio(3)"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="site-footer">
+    <div class="container">
+      <hr class="footer-dotted">
+      <div class="footer-grid">
+
+        <!-- Left column: Company info -->
+        <div>
+          <h4 style="font-size: 1.1rem;">Sells</h4>
+          <h4>Headquarters</h4>
+          <p>
+            5100 W JB Hunt Drive, STE 830<br>
+            Rogers, AR 72758
+          </p>
+          <p style="margin-top: 8px;">
+            Office Line: 
+            <a href="tel:+14793343226" class="gold-link">+1 (479) 334-3226</a>
+          </p>
+        </div>
+
+        <!-- Center column: Nav links -->
+        <div>
+          <div class="footer-nav">
+            <a href="#/for-sellers">For Sellers</a>
+            <a href="#/for-buyers">For Buyers</a>
+            <a href="#/company">Company</a>
+            <a href="#/insights">Insights</a>
+            <a href="#/careers">Careers</a>
+            <a href="#/contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Right column: Social + Logo -->
+        <div class="footer-right">
+          <a href="#" class="linkedin-icon" title="LinkedIn">in</a>
+          <img src="images/logos/sells-logo-horizontal-white.png" alt="Sells Advisory">
+          <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5);">Site by BMC</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom row -->
+      <div class="footer-bottom">
+        <p>Sells executes transactions across the U.S.A and internationally.</p>
+        <p>
+          &copy; 2026 Sells | ALL RIGHTS RESERVED | 
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Job Board</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    /* ==============================================================
+       TEAM MEMBER DATA
+       ============================================================== */
+    const teamData = [
+      {
+        name: 'Tyler Sells',
+        title: 'Founder & CEO',
+        bio1: 'Tyler Sells is the Founder and CEO of Sells Advisory, a middle-market investment bank dedicated to helping founders, owners, and investors navigate the most important transactions of their lives. With over a decade of experience in investment banking and private equity, Tyler founded Sells on the belief that trust is the foundation of every successful relationship and transaction.',
+        bio2: 'Prior to founding Sells, Tyler held senior roles in private equity and investment banking, where he developed deep expertise in M&A transaction execution, financial analysis, and strategic advisory. He is passionate about putting people first and creating an advisory experience that protects what matters most to founders and their families.'
+      },
+      {
+        name: 'David Ibrahim',
+        title: 'Partner',
+        bio1: 'David Ibrahim serves as Partner at Sells Advisory, where he plays a critical role in leading client engagements, managing transaction processes, and cultivating relationships with investors and strategic acquirers across the middle market.',
+        bio2: 'With extensive experience in investment banking and corporate finance, David brings a rigorous analytical approach and a collaborative leadership style to every engagement. He is dedicated to helping founders achieve outcomes that protect their people, preserve their legacies, and create lasting value for all stakeholders involved.'
+      },
+      {
+        name: 'Patrick Sells',
+        title: 'President',
+        bio1: 'Patrick Sells serves as President of Sells Advisory, overseeing firm operations, strategic growth, and client service delivery. His leadership ensures that the firm\'s values-driven approach is reflected in every engagement and interaction.',
+        bio2: 'With a background spanning finance, operations, and business development, Patrick brings a unique combination of strategic vision and operational discipline to his role. He is committed to building a firm that sets the standard for trust-based advisory in the middle market.'
+      },
+      {
+        name: 'Taryn Sells',
+        title: 'Chief Marketing Officer',
+        bio1: 'Taryn Sells serves as Chief Marketing Officer at Sells Advisory, leading the firm\'s brand strategy, marketing initiatives, and communications. She is responsible for articulating the Sells vision and ensuring the firm\'s message resonates with founders, investors, and partners.',
+        bio2: 'With expertise in brand development, digital marketing, and strategic communications, Taryn has built Sells Advisory\'s brand identity from the ground up. Her work ensures that the firm\'s commitment to trust, empathy, and excellence is communicated clearly and consistently across all channels.'
+      },
+      {
+        name: 'Richard Park',
+        title: 'Chief Revenue Officer',
+        bio1: 'Richard Park serves as Chief Revenue Officer at Sells Advisory, leading business development efforts and managing key investor and client relationships. His focus on strategic growth has been instrumental in expanding the firm\'s reach and impact.',
+        bio2: 'Richard brings decades of experience in financial services, business development, and relationship management. His deep network of relationships across the private equity and strategic buyer landscape provides Sells clients with access to a broad universe of qualified, aligned investors.'
+      },
+      {
+        name: 'Sam Johnson',
+        title: 'Managing Director',
+        bio1: 'Sam Johnson serves as Managing Director at Sells Advisory, where he leads transaction execution and provides strategic counsel to clients throughout the M&A process. His hands-on approach ensures that every engagement receives the attention and expertise it deserves.',
+        bio2: 'With significant experience in investment banking and financial analysis, Sam has been involved in numerous successful middle-market transactions across a variety of industries. He is known for his analytical rigor, client-first mentality, and ability to navigate complex deal dynamics.'
+      },
+      {
+        name: 'Mark Gundersen',
+        title: 'Board of Advisors',
+        bio1: 'Mark Gundersen serves on the Board of Advisors at Sells Advisory, providing strategic guidance and industry expertise to the firm\'s leadership team. His decades of experience in business, finance, and advisory services make him an invaluable resource.',
+        bio2: 'Mark has held senior leadership positions across multiple industries and brings a wealth of knowledge in corporate strategy, governance, and executive leadership. His counsel helps ensure that Sells Advisory maintains the highest standards of integrity and client service.'
+      },
+      {
+        name: 'Dylan Rauchman',
+        title: 'Board of Advisors',
+        bio1: 'Dylan Rauchman serves on the Board of Advisors at Sells Advisory, contributing strategic insight and deep expertise in private equity, investment management, and middle-market M&A. His perspective helps shape the firm\'s approach to client service and market positioning.',
+        bio2: 'With extensive experience in investment management and corporate advisory, Dylan brings a sophisticated understanding of capital markets and transaction dynamics to his advisory role. He is committed to helping Sells Advisory deliver exceptional outcomes for every client.'
+      }
+    ];
+
+    /* Current bio index for modal navigation */
+    let currentBioIndex = 0;
+
+    /* ==============================================================
+       ROUTER — Hash-based SPA routing
+       ============================================================== */
+    const routes = {
+      '/':               'page-home',
+      '/for-sellers':    'page-for-sellers',
+      '/for-buyers':     'page-for-buyers',
+      '/company':        'page-company',
+      '/difference':     'page-difference',
+      '/leadership':     'page-leadership',
+      '/insights':       'page-insights',
+      '/insights/post':  'page-insights-post',
+      '/contact':        'page-contact'
+    };
+
+    /**
+     * Get the current route from the URL hash
+     */
+    function getRoute() {
+      const hash = window.location.hash.replace('#', '') || '/';
+      return hash;
+    }
+
+    /**
+     * Navigate to a route — show the matching page, update nav state, scroll to top
+     */
+    function navigateTo(route) {
+      // Hide all pages
+      const allPages = document.querySelectorAll('.page');
+      allPages.forEach(function(page) {
+        page.classList.remove('active');
+      });
+
+      // Determine the page ID from the route
+      const pageId = routes[route];
+
+      // Show the correct page (or default to home)
+      if (pageId) {
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+          targetPage.classList.add('active');
+        }
+      } else {
+        // Default to home page for unknown routes
+        const homePage = document.getElementById('page-home');
+        if (homePage) {
+          homePage.classList.add('active');
+        }
+      }
+
+      // Update active nav state in desktop nav
+      const navLinks = document.querySelectorAll('.nav-row2 a[data-nav]');
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+
+      // Find the active page's data-nav attribute and highlight the matching nav link
+      const activePage = document.getElementById(pageId || 'page-home');
+      if (activePage) {
+        const navKey = activePage.getAttribute('data-nav');
+        const matchingNavLink = document.querySelector('.nav-row2 a[data-nav="' + navKey + '"]');
+        if (matchingNavLink) {
+          matchingNavLink.classList.add('active');
+        }
+      }
+
+      // Scroll to top of page
+      window.scrollTo(0, 0);
+
+      // Close mobile menu if open
+      closeMobileMenu();
+    }
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', function() {
+      navigateTo(getRoute());
+    });
+
+    // Initial route on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      navigateTo(getRoute());
+    });
+
+    /* ==============================================================
+       MOBILE MENU — Toggle hamburger slide-down
+       ============================================================== */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburgerBtn');
+
+      menu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburgerBtn');
+
+      if (menu) menu.classList.remove('open');
+      if (hamburger) hamburger.classList.remove('open');
+    }
+
+    /* ==============================================================
+       BIO MODAL — Open, close, next, prev functionality
+       ============================================================== */
+    function openBio(index) {
+      currentBioIndex = index;
+      const member = teamData[index];
+
+      // Populate modal content
+      document.getElementById('bioName').textContent = member.name;
+      document.getElementById('bioTitle').textContent = member.title;
+      document.getElementById('bioPara1').textContent = member.bio1;
+      document.getElementById('bioPara2').textContent = member.bio2;
+
+      // Update thumbnail active states
+      const thumbs = document.querySelectorAll('.bio-thumb');
+      thumbs.forEach(function(thumb, i) {
+        if (i === index) {
+          thumb.classList.add('active');
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+
+      // Show the overlay
+      document.getElementById('bioOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBio() {
+      document.getElementById('bioOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function nextBio() {
+      currentBioIndex = (currentBioIndex + 1) % teamData.length;
+      openBio(currentBioIndex);
+    }
+
+    function prevBio() {
+      currentBioIndex = (currentBioIndex - 1 + teamData.length) % teamData.length;
+      openBio(currentBioIndex);
+    }
+
+    // Close modal when clicking the overlay background
+    document.getElementById('bioOverlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeBio();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeBio();
+      }
+      // Arrow key navigation in bio modal
+      if (document.getElementById('bioOverlay').classList.contains('open')) {
+        if (e.key === 'ArrowRight') {
+          nextBio();
+        } else if (e.key === 'ArrowLeft') {
+          prevBio();
+        }
+      }
+    });
+
+    /* ==============================================================
+       PROCESS CAROUSEL — Dot navigation for 4 phases
+       ============================================================== */
+    function showPhase(index) {
+      // Hide all phases
+      const phases = document.querySelectorAll('.process-phase');
+      phases.forEach(function(phase) {
+        phase.classList.remove('active');
+      });
+
+      // Deactivate all dots
+      const dots = document.querySelectorAll('.process-dot');
+      dots.forEach(function(dot) {
+        dot.classList.remove('active');
+      });
+
+      // Show the selected phase
+      const targetPhase = document.querySelector('.process-phase[data-phase="' + index + '"]');
+      if (targetPhase) {
+        targetPhase.classList.add('active');
+      }
+
+      // Activate the corresponding dot
+      const targetDot = document.querySelector('.process-dot[data-phase="' + index + '"]');
+      if (targetDot) {
+        targetDot.classList.add('active');
+      }
+    }
+
+    /* ==============================================================
+       INSIGHTS FILTER — Click filter tab to show/hide cards
+       ============================================================== */
+    const filterTabs = document.querySelectorAll('.filter-tab');
+
+    filterTabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        // Update active tab styling
+        filterTabs.forEach(function(t) {
+          t.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Get the filter value
+        const filter = this.getAttribute('data-filter');
+
+        // Show/hide cards based on data-category
+        const cards = document.querySelectorAll('.insight-card');
+        cards.forEach(function(card) {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    /* ==============================================================
+       FORM VALIDATION — Required fields validation on submit
+       ============================================================== */
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const requiredInputs = form.querySelectorAll('input[required], textarea[required]');
+      let isValid = true;
+
+      // Clear previous error states
+      requiredInputs.forEach(function(input) {
+        input.classList.remove('input-error');
+      });
+
+      // Validate each required field
+      requiredInputs.forEach(function(input) {
+        const value = input.value.trim();
+
+        // Check if empty
+        if (!value) {
+          input.classList.add('input-error');
+          isValid = false;
+          return;
+        }
+
+        // Email format validation
+        if (input.type === 'email' && value) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            input.classList.add('input-error');
+            isValid = false;
+          }
+        }
+
+        // Phone format validation (at least some digits)
+        if (input.type === 'tel' && value) {
+          const digitsOnly = value.replace(/\D/g, '');
+          if (digitsOnly.length < 7) {
+            input.classList.add('input-error');
+            isValid = false;
+          }
+        }
+      });
+
+      if (isValid) {
+        // Show success message
+        alert('Thank you for your inquiry! A member of our team will be in touch shortly.');
+        form.reset();
+
+        // Remove any lingering error states
+        requiredInputs.forEach(function(input) {
+          input.classList.remove('input-error');
+        });
+      } else {
+        // Scroll to first error
+        const firstError = form.querySelector('.input-error');
+        if (firstError) {
+          firstError.focus();
+        }
+      }
+
+      return false;
+    }
+
+    /* ==============================================================
+       SMOOTH CTA LINKS — Handle hash-based navigation
+       ============================================================== */
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a[href^="#"]');
+      if (link) {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#/')) {
+          // Hash-based routing - the hashchange event handles navigation
+          // No additional action needed here
+          return;
+        }
+      }
+    });
+
+    /* ==============================================================
+       COMPANY DROPDOWN — Mobile click support
+       ============================================================== */
+    (function() {
+      // On mobile, toggle the dropdown on click instead of hover
+      const dropdown = document.querySelector('.nav-dropdown');
+      if (dropdown) {
+        dropdown.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+              const isVisible = menu.style.display === 'block';
+              menu.style.display = isVisible ? 'none' : 'block';
+            }
+          }
+        });
+      }
+    })();
+
+    /* ==============================================================
+       SCROLL EFFECT — Add shadow to header on scroll
+       ============================================================== */
+    (function() {
+      const header = document.getElementById('site-header');
+      let lastScrollY = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 10) {
+          header.style.boxShadow = '0 2px 16px rgba(0, 0, 0, 0.12)';
+        } else {
+          header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+        }
+
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+    })();
+  </script>
+
+</body>
+</html>
