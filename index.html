@@ -2651,6 +2651,728 @@
       }
     }
 
+
+    /* ==========================================================
+       FOR SELLERS PAGE STYLES (fs- prefix)
+       ========================================================== */
+
+    /* --- FS Hero + Intro combined --- */
+    .fs-hero {
+      position: relative;
+      min-height: 600px;
+      overflow: visible;
+      display: grid;
+      grid-template-columns: 48% 52%;
+      z-index: 2;
+    }
+
+    .fs-hero-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fs-hero-blue {
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      background-repeat: repeat;
+      padding: 60px 40px 50px 60px;
+      flex: 0 0 auto;
+    }
+
+    .fs-hero-blue h1 {
+      font-family: var(--font-heading);
+      font-size: 3.2rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .fs-hero-white {
+      background: #fff;
+      padding: 48px 50px 48px 60px;
+      flex: 1;
+    }
+
+    .fs-hero-white h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .fs-hero-white p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .fs-hero-photo {
+      position: relative;
+      margin-bottom: -70px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 88%);
+    }
+
+    .fs-hero-photo img {
+      width: 100%;
+      height: calc(100% + 70px);
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .fs-hero-photo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(234, 157, 19, 0.5);
+      clip-path: polygon(0% 86%, 0% 88%, 100% 100%, 100% 98%);
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .fs-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .fs-hero-photo {
+        height: 300px;
+        margin-bottom: 0;
+        clip-path: none;
+      }
+      .fs-hero-blue {
+        padding: 40px 24px;
+      }
+      .fs-hero-white {
+        padding: 32px 24px;
+      }
+    }
+
+    /* --- FS When the Time is Right --- */
+    .fs-timeright {
+      background: var(--light-bg);
+      padding: 90px 0 60px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .fs-timeright h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .fs-timeright-divider {
+      width: 200px;
+      border: none;
+      border-top: 2px dotted var(--gold);
+      margin: 16px auto;
+    }
+
+    .fs-timeright > .container > p {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    .fs-timeright-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .fs-timeright-card {
+      text-align: left;
+      padding: 0 8px;
+    }
+
+    .fs-timeright-card .icon-wrap {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .fs-timeright-card .icon-wrap img {
+      height: 60px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .fs-timeright-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .fs-timeright-card ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+
+    .fs-timeright-card ul li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .fs-timeright-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fs-timeright-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- FS Knowledge Section (blue) --- */
+    .fs-knowledge {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fs-knowledge-grid {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      min-height: 650px;
+    }
+
+    .fs-knowledge-photo {
+      position: relative;
+    }
+
+    .fs-knowledge-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fs-knowledge-photo::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(234, 157, 19, 0.55);
+      clip-path: polygon(88% 14%, 90.5% 14%, 100% 86%, 97.5% 86%);
+      z-index: 2;
+    }
+
+    .fs-knowledge-content {
+      background-image: url('images/patterns/pattern-blue-2rows.jpg');
+      background-color: var(--navy);
+      background-size: auto;
+      background-repeat: repeat;
+      padding: 50px 50px 50px 40px;
+      color: #fff;
+    }
+
+    .fs-knowledge-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .fs-knowledge-content h2 .text-gold {
+      color: var(--gold);
+    }
+
+    .fs-knowledge-content > p {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      font-size: 0.88rem;
+      margin-bottom: 24px;
+    }
+
+    .fs-knowledge-sub {
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .fs-knowledge-content ul {
+      list-style: disc;
+      padding-left: 18px;
+      margin-bottom: 8px;
+    }
+
+    .fs-knowledge-content ul li {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+
+    .fs-knowledge-goldbar {
+      width: 100%;
+      height: 6px;
+      background: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .fs-knowledge-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .fs-knowledge-photo {
+        height: 300px;
+      }
+      .fs-knowledge-content {
+        padding: 40px 24px;
+      }
+    }
+
+    /* --- FS Process --- */
+    .fs-process {
+      background: #fff;
+      padding: 60px 0;
+      text-align: center;
+      border-bottom: 2px dotted var(--gold);
+    }
+
+    .fs-process-heading {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .fs-process-heading img {
+      height: 36px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 6px;
+    }
+
+    .fs-process-banner {
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      padding: 12px 48px;
+      display: inline-block;
+      clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+      margin: 16px 0 32px;
+    }
+
+    .fs-process-phase {
+      display: none;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .fs-process-phase.active {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px 40px;
+      align-items: start;
+    }
+
+    .fs-process-phase-left h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-style: normal;
+    }
+
+    .fs-process-phase-left .week {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .fs-process-phase-left .week::before {
+      content: '';
+      display: block;
+      width: 80px;
+      border-top: 2px dotted var(--gold);
+      margin: 8px 0;
+    }
+
+    .fs-process-phase-right h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .fs-process-phase-right ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+
+    .fs-process-phase-right ul li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+
+    .fs-process-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .fs-process-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .fs-process-dot.active {
+      background: var(--navy);
+    }
+
+    @media (max-width: 768px) {
+      .fs-process-phase.active {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- FS Right People --- */
+    .fs-rightpeople {
+      background: #fff;
+      padding: 50px 0 60px;
+    }
+
+    .fs-rightpeople-grid {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .fs-rightpeople-text h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .fs-rightpeople-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .fs-rightpeople-divider {
+      border: none;
+      border-top: 2px dotted var(--gold);
+      margin: 16px 0;
+    }
+
+    .fs-rightpeople-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+      list-style: disc;
+      padding-left: 18px;
+    }
+
+    .fs-rightpeople-list li {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+    }
+
+    .fs-rightpeople-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .fs-rightpeople-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- FS Testimonial --- */
+    .fs-testimonial {
+      position: relative;
+      background: #fff;
+      padding: 60px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .fs-testimonial::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: var(--gold);
+      clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
+
+    .fs-testimonial .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .fs-testimonial-marks {
+      font-size: 5rem;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      line-height: 0.6;
+      margin-bottom: 16px;
+    }
+
+    .fs-testimonial-quote {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .fs-testimonial-author {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.95rem;
+    }
+
+    .fs-testimonial-company {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Hero right photo support */
+    .hero-right.has-photo {
+      background: none !important;
+    }
+    .hero-right.has-photo img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-right.has-photo .hero-bar {
+      z-index: 2;
+    }
+
+    /* Testimonial light variant (white/light bg) */
+    .testimonial-light {
+      background: #fff;
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-light::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: var(--gold);
+      clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
+    .testimonial-light .container {
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-light .testimonial-marks {
+      color: var(--gold);
+    }
+    .testimonial-light .testimonial-quote {
+      color: var(--navy);
+    }
+    .testimonial-light .testimonial-author {
+      color: var(--navy);
+    }
+    .testimonial-light .testimonial-company {
+      color: var(--text-muted);
+    }
+
+    /* Value cards 4-column layout */
+    .value-cards-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .value-card-slim {
+      text-align: center;
+      padding: 0 8px;
+    }
+    .value-card-slim .card-label {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .value-card-slim h4 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .value-card-slim p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .value-cards-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Filter tabs plain text style (matching PDF) */
+    .filter-plain {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .filter-plain .filter-label {
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+    .filter-plain .filter-sep {
+      color: var(--text-muted);
+      margin: 0 2px;
+    }
+    .filter-plain .filter-link {
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 2px 4px;
+      transition: color 0.3s;
+      border: none;
+      background: none;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+    }
+    .filter-plain .filter-link:hover,
+    .filter-plain .filter-link.active {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Contact page 3-column layout */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .contact-layout .contact-left {
+      max-width: 100%;
+    }
+    .contact-layout .contact-right {
+      padding-top: 0;
+    }
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Values diagram arrows */
+    .values-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .values-item .values-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .values-item .values-content {
+      flex: 1;
+    }
+    .values-item .values-pair {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .values-item .values-pair strong {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .values-item .values-pair .values-arrow {
+      flex: 1;
+      border-top: 2px dashed var(--gold);
+      min-width: 40px;
+      max-width: 80px;
+      position: relative;
+    }
+    .values-item .values-pair .values-arrow::after {
+      content: '\25B6';
+      position: absolute;
+      right: -8px;
+      top: -8px;
+      color: var(--gold);
+      font-size: 0.6rem;
+    }
+    .values-item .values-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
   </style>
 </head>
 <body>
@@ -3050,95 +3772,96 @@
        ============================================================ -->
   <div class="page" id="page-for-sellers" data-nav="for-sellers">
 
-    <!-- === HERO === -->
-    <section class="hero">
-      <div class="hero-left">
-        <div><h1>For Sellers</h1></div>
-      </div>
-      <div class="hero-right">
-        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
-      </div>
-    </section>
-    <div class="hero-gold-line"></div>
-
-    <!-- === INTRO === -->
-    <section class="section-white">
-      <div class="container two-col">
-        <div>
-          <h3 class="section-heading">
-            It&rsquo;s your business, and we take it personally.
-          </h3>
-          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
-            Sells specializes in mergers and acquisitions for middle-market, privately held 
-            businesses. We are trusted advisors to founders and ownership groups who want to 
-            protect their people, preserve their legacies, and achieve the very best transaction 
-            outcomes.
+    <!-- === FS HERO + INTRO === -->
+    <section class="fs-hero">
+      <div class="fs-hero-left">
+        <div class="fs-hero-blue">
+          <h1>For Sellers</h1>
+        </div>
+        <div class="fs-hero-white">
+          <h2>It&rsquo;s your business, and we take it personally.</h2>
+          <p>
+            Sells specializes in mergers and acquisitions for Main Street, where founders and
+            leaders of private businesses stand poised to write the next chapters in their stories.
           </p>
-          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
-            Our team brings decades of experience in investment banking, private equity, and 
-            entrepreneurship&mdash;combining investor-level insight with a people-first approach 
-            that puts your interests at the center of every decision.
+          <p>
+            This focus is by design. In these defining moments, our clients want an advisor
+            who works to protect their priorities and preserve their legacies.
           </p>
         </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
-        </div>
+      </div>
+      <div class="fs-hero-photo">
+        <img src="images/photos/fs-hero-man.png" alt="For Sellers">
       </div>
     </section>
 
     <!-- === WHEN THE TIME IS RIGHT === -->
-    <section class="section-white" style="padding-top: 0;">
-      <div class="container text-center">
-        <h2 class="section-heading">When the time is right, you&rsquo;ll be ready.</h2>
-        <p style="max-width: 700px; margin: 0 auto 32px; color: var(--text-muted); line-height: 1.7;">
-          Whether you're planning for retirement, seeking growth capital, or exploring a full 
-          or partial exit, Sells helps you prepare for and navigate life's most important 
-          business decisions.
+    <section class="fs-timeright">
+      <div class="container">
+        <h2>When the time is right, you&rsquo;ll be ready.</h2>
+        <hr class="fs-timeright-divider">
+        <p>
+          There are many reasons why you might consider stepping away, stepping aside, or staying where you are. We
+          understand the journey that led you to this moment, and we&rsquo;ll guide you through whatever is next.
         </p>
-        <div class="four-cols" style="text-align: left;">
+        <div class="fs-timeright-cards">
 
-          <div>
-            <div class="gold-circle-icon">&#9670;</div>
-            <h4 class="text-center">Retirement Planning</h4>
+          <div class="fs-timeright-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-sell-side.png" alt="Retirement Planning">
+            </div>
+            <h4>Retirement Planning</h4>
             <ul>
-              <li>Succession planning</li>
-              <li>Legacy preservation</li>
-              <li>Wealth management coordination</li>
-              <li>Tax-optimized exit strategies</li>
+              <li>Convert years of hard work into financial security.</li>
+              <li>Maximize business value before you step away.</li>
+              <li>Know when to start planning for retirement, and when to exit.</li>
+              <li>Protect your legacy with a succession plan.</li>
+              <li>Create retirement income with tax-efficient strategies.</li>
+              <li>Choose a total sale, a gradual transition, a family succession plan, or a third-party buyer.</li>
             </ul>
           </div>
 
-          <div>
-            <div class="gold-circle-icon">&#9670;</div>
-            <h4 class="text-center">Growth Capital</h4>
+          <div class="fs-timeright-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-buy-side.png" alt="Growth Capital">
+            </div>
+            <h4>Growth Capital</h4>
             <ul>
-              <li>Strategic investment sourcing</li>
-              <li>Recapitalization options</li>
-              <li>Partnership structuring</li>
-              <li>Valuation optimization</li>
+              <li>Access capital without giving up control.</li>
+              <li>Fund expansion, new locations, or equipment and maintain majority ownership.</li>
+              <li>Bring in strategic, value-added partners with unique expertise.</li>
+              <li>Recapitalize to avoid a full exit, or maintaining status quo.</li>
+              <li>Solicit minority investment to help streamline operations and boost enterprise value.</li>
             </ul>
           </div>
 
-          <div>
-            <div class="gold-circle-icon">&#9670;</div>
-            <h4 class="text-center">Business Exit</h4>
+          <div class="fs-timeright-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-strategic-prep.png" alt="Business Exit">
+            </div>
+            <h4>Business Exit</h4>
             <ul>
-              <li>Full sale preparation</li>
-              <li>Competitive buyer processes</li>
-              <li>Deal structuring &amp; negotiation</li>
-              <li>Post-transaction support</li>
+              <li>Realize the utmost value for your life&rsquo;s work.</li>
+              <li>Get your business sale-ready to help ensure the best possible outcome.</li>
+              <li>Explore the differences between strategic and financial buyers.</li>
+              <li>Consider the deal structure: all cash, earnouts, or seller notes.</li>
+              <li>Ensure a smooth transition for employees and customers.</li>
+              <li>Choose a full liquidity event and move on to the next chapter.</li>
             </ul>
           </div>
 
-          <div>
-            <div class="gold-circle-icon">&#9670;</div>
-            <h4 class="text-center">Partial Cash-out</h4>
+          <div class="fs-timeright-card">
+            <div class="icon-wrap">
+              <img src="images/icons/icon-transaction-mgt.png" alt="Partial Cash-out">
+            </div>
+            <h4>Partial Cash-out</h4>
             <ul>
-              <li>Minority recapitalization</li>
-              <li>Dividend recaps</li>
-              <li>Maintain operational control</li>
-              <li>De-risk personal wealth</li>
+              <li>Take chips off the table, but stay in the game.</li>
+              <li>Enjoy upside potential while protecting your personal wealth.</li>
+              <li>Bring on a new partner and take a second bite at the apple.</li>
+              <li>Gain liquidity for personal diversification without making a full exit.</li>
+              <li>Recapitalize and stay on as CEO/operator with fresh resources.</li>
+              <li>Roll equity positions and create value with institutional backing.</li>
             </ul>
           </div>
 
@@ -3146,188 +3869,196 @@
       </div>
     </section>
 
-    <!-- === KNOWLEDGE COUNTS === -->
-    <section class="section-blue knowledge-section">
-      <div class="container two-col">
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff; line-height: 1.3;">
+    <!-- === KNOWLEDGE SECTION (blue) === -->
+    <section class="fs-knowledge">
+      <div class="fs-knowledge-grid">
+        <div class="fs-knowledge-photo">
+          <img src="images/photos/fs-knowledge-bg.png" alt="Knowledge counts">
+        </div>
+        <div class="fs-knowledge-content">
+          <h2>
             Knowledge counts.<br>
             Experience matters.<br>
             <span class="text-gold">Trust Sells.</span>
           </h2>
-        </div>
-        <div>
-          <p style="color: rgba(255,255,255,0.85); margin-bottom: 12px; line-height: 1.7;">
-            We combine deep industry expertise with a values-driven approach to deliver 
-            outcomes that protect what matters most.
+          <p>
+            Sells brings decades of combined experience and deep market
+            knowledge to every relationship. But ultimately, founders cite
+            trust as the deciding factor in accepting an offer. That&rsquo;s why
+            everything we do is designed to create an atmosphere of stability,
+            calm, and confidence.
           </p>
 
-          <div class="gold-sub">Putting People First</div>
+          <div class="fs-knowledge-sub">Putting People First</div>
           <ul>
-            <li>We listen before we advise, building relationships grounded in empathy and respect</li>
-            <li>Your team, your culture, and your community are priorities&mdash;not afterthoughts</li>
-            <li>Every engagement is personal, because your business is personal</li>
+            <li>Sells grows and nurtures meaningful relationships with business owners over time</li>
+            <li>We listen for what matters beyond the numbers: people, culture, and legacy</li>
+            <li>We provide exclusive, conflict-free representation centered on your goals and interests</li>
           </ul>
 
-          <div class="gold-sub">Optimizing Opportunity</div>
+          <div class="fs-knowledge-sub">Optimizing Opportunity</div>
           <ul>
-            <li>Investor-level analysis to identify and articulate your company's full value</li>
-            <li>Strategic positioning to attract the right partners and maximize terms</li>
-            <li>Proprietary relationships with leading private equity firms and strategic acquirers</li>
+            <li>Sells maximizes valuation through positioning, marketing, and negotiation</li>
+            <li>We work with principled, aligned investors and sponsors</li>
+            <li>We negotiate the best deal, not just the best price</li>
           </ul>
 
-          <div class="gold-sub">Guiding the Process</div>
+          <div class="fs-knowledge-sub">Guiding the Process</div>
           <ul>
-            <li>End-to-end transaction management from preparation through close</li>
-            <li>Coordination of legal, financial, tax, and operational workstreams</li>
-            <li>Transparent communication at every stage so there are no surprises</li>
+            <li>Sells leads the entire journey&mdash;from LOI to closing&mdash;with transparency, discretion, and precision</li>
+            <li>We provide comprehensive support during valuation, marketing, outreach, and due diligence</li>
+            <li>We maintain absolute confidentiality. Period.</li>
+            <li>We manage the details while you run your business</li>
           </ul>
         </div>
       </div>
+      <div class="fs-knowledge-goldbar"></div>
     </section>
 
     <!-- === THE SELLS PROCESS === -->
-    <section class="section-white">
-      <div class="container text-center">
-        <h2 class="section-heading">
-          The 
-          <img src="images/logos/sells-symbol.png" alt="Sells" 
-               style="height: 36px; display: inline-block; vertical-align: middle; margin: 0 4px;"> 
+    <section class="fs-process">
+      <div class="container">
+        <h2 class="fs-process-heading">
+          The
+          <img src="images/logos/sells-symbol.png" alt="Sells">
           Sells&trade; Process
         </h2>
-        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 8px auto 24px;">
+        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 0 auto 8px; display: block;">
 
-        <div class="process-carousel">
+        <div class="fs-process-banner" id="fsPhaseBanner">Preparation and Positioning</div>
 
-          <!-- Phase 1 -->
-          <div class="process-phase active" data-phase="0">
-            <div class="process-header">
-              Phase 1: Preparation &amp; Positioning &mdash; Weeks 1&ndash;4
+        <div class="fs-process-carousel">
+          <div class="fs-process-phase active" data-phase="0">
+            <div class="fs-process-phase-left">
+              <h3>Phase 1</h3>
+              <div class="week">Week 1&ndash;4</div>
             </div>
-            <div class="process-body">
-              <h4>What to expect:</h4>
+            <div class="fs-process-phase-right">
+              <h4>The Sells Process&trade; &mdash; Day One to Close</h4>
               <ul>
-                <li>Comprehensive business review and valuation analysis</li>
-                <li>Financial model development and quality of earnings preparation</li>
-                <li>Marketing materials: Confidential Information Memorandum (CIM), executive summary, and teaser</li>
-                <li>Buyer universe development and strategic targeting</li>
-                <li>Entity and tax structure review with your advisors</li>
+                <li>Conduct thorough diligence across financials, operations, customers, and teams</li>
+                <li>Develop top-tier CIM, teaser, and financial model; prep dataroom</li>
+                <li>Align on buyer outreach strategy and valuation framework</li>
               </ul>
             </div>
           </div>
 
-          <!-- Phase 2 -->
-          <div class="process-phase" data-phase="1">
-            <div class="process-header">
-              Phase 2: Market Outreach &mdash; Weeks 5&ndash;8
+          <div class="fs-process-phase" data-phase="1">
+            <div class="fs-process-phase-left">
+              <h3>Phase 2</h3>
+              <div class="week">Week 5&ndash;8</div>
             </div>
-            <div class="process-body">
-              <h4>What to expect:</h4>
+            <div class="fs-process-phase-right">
+              <h4>Market Outreach &amp; Engagement</h4>
               <ul>
                 <li>Confidential outreach to pre-qualified strategic and financial buyers</li>
-                <li>Management of Non-Disclosure Agreements (NDAs)</li>
-                <li>Distribution of marketing materials and data room access</li>
+                <li>Management of NDAs and distribution of marketing materials</li>
                 <li>Facilitation of management presentations and site visits</li>
                 <li>Collection and analysis of Indications of Interest (IOIs)</li>
               </ul>
             </div>
           </div>
 
-          <!-- Phase 3 -->
-          <div class="process-phase" data-phase="2">
-            <div class="process-header">
-              Phase 3: Due Diligence &amp; Negotiations &mdash; Weeks 9&ndash;16
+          <div class="fs-process-phase" data-phase="2">
+            <div class="fs-process-phase-left">
+              <h3>Phase 3</h3>
+              <div class="week">Week 9&ndash;16</div>
             </div>
-            <div class="process-body">
-              <h4>What to expect:</h4>
+            <div class="fs-process-phase-right">
+              <h4>Due Diligence &amp; Negotiations</h4>
               <ul>
                 <li>Coordination of financial, legal, operational, and environmental due diligence</li>
                 <li>Negotiation of Letter of Intent (LOI) terms</li>
                 <li>Purchase agreement drafting and redlining</li>
                 <li>Working capital and adjustment mechanism negotiations</li>
-                <li>Employment, non-compete, and transition planning</li>
               </ul>
             </div>
           </div>
 
-          <!-- Phase 4 -->
-          <div class="process-phase" data-phase="3">
-            <div class="process-header">
-              Phase 4: Close &amp; Transition &mdash; Weeks 16&ndash;20
+          <div class="fs-process-phase" data-phase="3">
+            <div class="fs-process-phase-left">
+              <h3>Phase 4</h3>
+              <div class="week">Week 16&ndash;20</div>
             </div>
-            <div class="process-body">
-              <h4>What to expect:</h4>
+            <div class="fs-process-phase-right">
+              <h4>Close &amp; Transition</h4>
               <ul>
                 <li>Final purchase agreement execution</li>
                 <li>Funds flow coordination and closing mechanics</li>
                 <li>Transition planning support and communication strategy</li>
                 <li>Post-closing adjustment management</li>
-                <li>Ongoing relationship and advisory support</li>
               </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Phase navigation dots -->
-          <div class="process-dots">
-            <span class="process-dot active" data-phase="0" onclick="showPhase(0)"></span>
-            <span class="process-dot" data-phase="1" onclick="showPhase(1)"></span>
-            <span class="process-dot" data-phase="2" onclick="showPhase(2)"></span>
-            <span class="process-dot" data-phase="3" onclick="showPhase(3)"></span>
-          </div>
+        <div class="fs-process-dots">
+          <span class="fs-process-dot active" data-phase="0" onclick="showFsPhase(0)"></span>
+          <span class="fs-process-dot" data-phase="1" onclick="showFsPhase(1)"></span>
+          <span class="fs-process-dot" data-phase="2" onclick="showFsPhase(2)"></span>
+          <span class="fs-process-dot" data-phase="3" onclick="showFsPhase(3)"></span>
         </div>
       </div>
     </section>
 
     <!-- === RIGHT PEOPLE === -->
-    <section class="section-white" style="padding-top: 0;">
-      <div class="container two-col-55-45">
-        <div>
-          <h3 class="section-heading">
-            The right people, right when you need them.
-          </h3>
-          <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
-            Sells coordinates a network of specialized professionals to support every 
-            aspect of your transaction, ensuring nothing is overlooked.
-          </p>
-          <hr class="gold-dotted">
-          <ul class="right-people-list">
-            <li>Accounting</li>
-            <li>Tax Counsel</li>
-            <li>Financial Diligence</li>
-            <li>General Counsel</li>
-            <li>Legal Transaction</li>
-            <li>Private Wealth Management</li>
-          </ul>
-        </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
+    <section class="fs-rightpeople">
+      <div class="container">
+        <div class="fs-rightpeople-grid">
+          <div class="fs-rightpeople-text">
+            <h2>The right people, right when you need them.</h2>
+            <p>
+              To support you on the path to a rewarding outcome, Sells brings a
+              network of advisors, professionals, and experts in every facet of the
+              M&amp;A process. Together, we&rsquo;ll prepare your business for maximum
+              valuation, facilitate a faster close, and follow through well beyond the
+              transaction with guidance on wealth management, succession
+              planning, and more.
+            </p>
+            <hr class="fs-rightpeople-divider">
+            <ul class="fs-rightpeople-list">
+              <li>Accounting</li>
+              <li>Tax Counsel</li>
+              <li>Financial Diligence</li>
+              <li>General Counsel</li>
+              <li>Legal Transaction</li>
+              <li>Private Wealth Management</li>
+            </ul>
+          </div>
+          <div class="fs-rightpeople-photo">
+            <img src="images/photos/fs-rightpeople.png" alt="The right people">
+          </div>
         </div>
       </div>
     </section>
 
     <!-- === TESTIMONIAL === -->
-    <section class="testimonial-section">
+    <section class="fs-testimonial">
       <div class="container">
-        <div class="testimonial-marks">&ldquo;</div>
-        <p class="testimonial-quote">
-          This is where a short and powerful client testimony would go to talk about 
-          the success that Sells has helped this Founder during an M&amp;A process.
+        <div class="fs-testimonial-marks">&ldquo;</div>
+        <p class="fs-testimonial-quote">
+          This is where a short and powerful client testimony would go
+          to talk about the success that Sells has helped this Founder
+          during an M&amp;A process.
         </p>
-        <p class="testimonial-author">Peter Parker</p>
-        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
-        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+        <p class="fs-testimonial-author">Peter Parker</p>
+        <p class="fs-testimonial-company">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 16px auto 0;">
       </div>
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help. Reach out to start a confidential conversation.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -3351,6 +4082,8 @@
 
   </div>
 
+
+
   <!-- ============================================================
        FOR BUYERS PAGE (#/for-buyers)
        ============================================================ -->
@@ -3361,9 +4094,9 @@
       <div class="hero-left">
         <div><h1>For Buyers</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/fb-hero.png" alt="For Buyers">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -3387,8 +4120,8 @@
             providing the insight and access you need to make confident decisions.
           </p>
         </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
+        <div>
+          <img src="images/photos/fb-intro.png" alt="Investors" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
@@ -3406,40 +4139,55 @@
           <div>
             <h4 class="gold-underline-heading">Aligned</h4>
             <ul>
-              <li>Shared vision for the company's future</li>
-              <li>Cultural compatibility with founders and teams</li>
-              <li>Commitment to preserving legacies and communities</li>
-              <li>Long-term partnership mindset over short-term returns</li>
+              <li>Focused on defining success beyond the number</li>
+              <li>Aligned incentives: our fee structure rewards the best outcome for you</li>
+              <li>Long-term relationship mentality vs. transactional</li>
+              <li>Protecting what matters: employees, culture, brand, community impact</li>
             </ul>
           </div>
 
           <div>
             <h4 class="gold-underline-heading">Strategic</h4>
             <ul>
-              <li>Clear investment thesis and sector expertise</li>
-              <li>Value-creation plans that benefit all stakeholders</li>
-              <li>Operational resources to support growth post-close</li>
-              <li>Network of portfolio companies for synergies</li>
+              <li>Market intelligence: we know who&rsquo;s buying, what they&rsquo;re paying, and why</li>
+              <li>Proactive deal positioning&mdash;getting ahead of market dynamics</li>
+              <li>Sophisticated buyer targeting and qualification process</li>
+              <li>Strategic storytelling: crafting the narrative that maximizes value</li>
+              <li>Process tailored to your situation and goals</li>
+              <li>Anticipating buyer objections and structuring around them</li>
+              <li>Understanding consolidation trends and industry-specific dynamics</li>
+              <li>Data-driven approach to valuation and market positioning</li>
+              <li>Creating competitive tension to drive optimal terms</li>
+              <li>Not just finding a buyer&mdash;finding the right buyer</li>
             </ul>
           </div>
 
           <div>
             <h4 class="gold-underline-heading">Ethical</h4>
             <ul>
-              <li>Transparent communication throughout the process</li>
-              <li>Fair and straightforward deal structures</li>
-              <li>Respect for the seller's timeline and priorities</li>
-              <li>Reputation for integrity in the market</li>
+              <li>Transparency in process, pricing, and expectations</li>
+              <li>Honest about valuation&mdash;we won&rsquo;t overpromise to win business</li>
+              <li>Protecting confidentiality throughout the process</li>
+              <li>No pressure tactics or artificially rushed timelines</li>
+              <li>Clear communication about risks, trade-offs, and deal structure implications</li>
+              <li>Integrity in representing your business to buyers</li>
+              <li>Fair dealings with all parties while fiercely advocating for our client</li>
+              <li>Long-term reputation over short-term fees</li>
+              <li>We turn down deals that aren&rsquo;t the right fit</li>
+              <li>Compliance with all regulatory and professional standards</li>
             </ul>
           </div>
 
           <div>
             <h4 class="gold-underline-heading">Proven</h4>
             <ul>
-              <li>Track record of successful acquisitions and exits</li>
-              <li>Experienced operating and management teams</li>
-              <li>Strong references from founders and management</li>
-              <li>Committed capital and efficient closing processes</li>
+              <li>$2B+ in closed M&amp;A transactions</li>
+              <li>Track record across home services, commercial services, and related industries</li>
+              <li>Repeat clients and referral-based growth</li>
+              <li>Trusted by both founders and institutional investors</li>
+              <li>Deep buyer network cultivated over years of relationship building</li>
+              <li>Successfully navigated complex deal structures and negotiations</li>
+              <li>Portfolio of closed deals that speak for themselves</li>
             </ul>
           </div>
 
@@ -3450,8 +4198,8 @@
     <!-- === WHY BUYERS TRUST SELLS === -->
     <section class="section-white" style="padding-top: 0;">
       <div class="container two-col">
-        <div class="photo-placeholder" style="min-height: 350px;">
-          Photo placeholder
+        <div>
+          <img src="images/photos/fb-trust.png" alt="Why buyers trust Sells" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
         <div>
           <h3 class="section-heading">Why buyers trust Sells:</h3>
@@ -3500,28 +4248,31 @@
     </section>
 
     <!-- === TESTIMONIAL === -->
-    <section class="testimonial-section">
-      <div class="container">
-        <div class="testimonial-marks">&ldquo;</div>
-        <p class="testimonial-quote">
-          This is where a short and powerful client testimony would go to talk about 
+    <section class="testimonial-light">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <div style="font-family: var(--font-heading); font-size: 5rem; color: var(--gold); line-height: 1;">&ldquo;</div>
+        <p style="font-family: var(--font-heading); font-size: 1.35rem; font-style: italic; color: var(--text-dark); line-height: 1.8; margin-bottom: 16px;">
+          This is where a short and powerful client testimony would go to talk about
           the success that Sells has helped this Founder during an M&amp;A process.
         </p>
-        <p class="testimonial-author">Peter Parker</p>
-        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
-        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+        <p style="font-weight: 700; color: var(--text-dark); margin-bottom: 2px;">Peter Parker</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 16px auto 0;">
       </div>
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help. Reach out to start a confidential conversation.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -3555,9 +4306,9 @@
       <div class="hero-left">
         <div><h1>About Sells</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/about-hero.png" alt="About Sells">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -3600,8 +4351,8 @@
     <!-- === TRUST PRINCIPLES === -->
     <section class="section-white" style="padding-top: 0;">
       <div class="container two-col">
-        <div class="photo-placeholder" style="min-height: 350px;">
-          Photo placeholder
+        <div>
+          <img src="images/photos/fb-intro.png" alt="Above all, we value trust" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
         <div>
           <h3 class="section-heading">Above all, we value trust.</h3>
@@ -3677,13 +4428,13 @@
 
     <!-- === RIGHT PEOPLE === -->
     <section class="section-white">
-      <div class="container two-col-55-45">
-        <div>
+      <div class="container two-col-55-45" style="direction: rtl;">
+        <div style="direction: ltr;">
           <h3 class="section-heading">
             The right people, right when you need them.
           </h3>
           <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
-            Sells coordinates a network of specialized professionals to support every 
+            Sells coordinates a network of specialized professionals to support every
             aspect of your transaction, ensuring nothing is overlooked.
           </p>
           <hr class="gold-dotted">
@@ -3696,35 +4447,38 @@
             <li>Private Wealth Management</li>
           </ul>
         </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
+        <div style="direction: ltr;">
+          <img src="images/photos/company-rightpeople.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
 
     <!-- === TESTIMONIAL === -->
-    <section class="testimonial-section">
-      <div class="container">
-        <div class="testimonial-marks">&ldquo;</div>
-        <p class="testimonial-quote">
-          This is where a short and powerful client testimony would go to talk about 
+    <section class="testimonial-light">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <div style="font-family: var(--font-heading); font-size: 5rem; color: var(--gold); line-height: 1;">&ldquo;</div>
+        <p style="font-family: var(--font-heading); font-size: 1.35rem; font-style: italic; color: var(--text-dark); line-height: 1.8; margin-bottom: 16px;">
+          This is where a short and powerful client testimony would go to talk about
           the success that Sells has helped this Founder during an M&amp;A process.
         </p>
-        <p class="testimonial-author">Peter Parker</p>
-        <p class="testimonial-company">ABC Plumbing Company, LLC</p>
-        <img src="images/patterns/diamond.png" alt="" class="testimonial-diamond">
+        <p style="font-weight: 700; color: var(--text-dark); margin-bottom: 2px;">Peter Parker</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">ABC Plumbing Company, LLC</p>
+        <img src="images/patterns/diamond.png" alt="" style="width: 14px; margin: 16px auto 0;">
       </div>
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -3758,9 +4512,9 @@
       <div class="hero-left">
         <div><h1>Our Difference</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/difference-hero.png" alt="Our Difference">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -3809,45 +4563,30 @@
     <!-- === 4 VALUE CARDS === -->
     <section class="section-white">
       <div class="container">
-        <div class="value-cards">
+        <div class="value-cards-row">
 
-          <div class="value-card">
-            <h4>Seller <strong>Empathy</strong></h4>
-            <p>
-              We begin every engagement by deeply understanding the seller&mdash;their goals, 
-              their fears, their non-negotiables. By leading with empathy, we create an 
-              environment of psychological safety that allows founders to make their best 
-              decisions with confidence and clarity.
-            </p>
+          <div class="value-card-slim">
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2px;">Seller</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 8px;">Empathy</h4>
+            <p class="card-label">We begin every engagement by deeply understanding the seller&mdash;their goals, their fears, their non-negotiables.</p>
           </div>
 
-          <div class="value-card">
-            <h4>Buyer <strong>Alignment</strong></h4>
-            <p>
-              We cultivate relationships with investors who share our values&mdash;those who 
-              lead with integrity, invest with purpose, and honor the legacies they acquire. 
-              By aligning buyer and seller values from the start, we create partnerships that 
-              endure well beyond the closing table.
-            </p>
+          <div class="value-card-slim">
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2px;">Buyer</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 8px;">Alignment</h4>
+            <p class="card-label">We cultivate relationships with investors who share our values&mdash;those who lead with integrity, invest with purpose.</p>
           </div>
 
-          <div class="value-card">
-            <h4>Clear <strong>Process</strong></h4>
-            <p>
-              Our process is transparent, efficient, and meticulously managed. From preparation 
-              through close, every step is designed to protect your interests, minimize disruption, 
-              and deliver outcomes that exceed expectations. No surprises, no shortcuts, no gaps.
-            </p>
+          <div class="value-card-slim">
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2px;">Clear</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 8px;">Process</h4>
+            <p class="card-label">Our process is transparent, efficient, and meticulously managed. No surprises, no shortcuts, no gaps.</p>
           </div>
 
-          <div class="value-card">
-            <h4>Rewarding <strong>Outcomes</strong></h4>
-            <p>
-              When empathy, alignment, and process come together, the result is a transaction 
-              that creates lasting value for everyone involved. Our clients don't just close 
-              deals&mdash;they achieve outcomes that protect their people, preserve their legacies, 
-              and open new chapters with optimism.
-            </p>
+          <div class="value-card-slim">
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2px;">Rewarding</h4>
+            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 8px;">Outcomes</h4>
+            <p class="card-label">When empathy, alignment, and process come together, the result is lasting value for everyone involved.</p>
           </div>
 
         </div>
@@ -3859,25 +4598,31 @@
       <div class="container two-col">
         <div>
           <h3 class="section-heading">
-            What the Sells Difference delivers for <span class="text-gold">Sellers</span>:
+            What the Sells Difference<br>delivers for <span class="text-gold">Sellers</span>:
           </h3>
-          <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted);">
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+          <ul style="padding-left: 0; list-style: none; color: var(--text-muted);">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               A trusted advisor who understands your business like an insider
             </li>
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               Investor-level analysis and positioning to maximize value
             </li>
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               Access to qualified, aligned buyers who share your values
             </li>
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               A transparent, well-managed process from start to finish
             </li>
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               Protection for your team, culture, and community
             </li>
-            <li style="margin-bottom: 8px; line-height: 1.5;">
+            <li style="margin-bottom: 8px; line-height: 1.5; padding-left: 20px; position: relative;">
+              <img src="images/patterns/diamond.png" alt="" style="width: 10px; position: absolute; left: 0; top: 5px;">
               Confidence and fulfillment through your defining moment
             </li>
           </ul>
@@ -3885,8 +4630,8 @@
             More for Sellers
           </a>
         </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
+        <div>
+          <img src="images/photos/diff-sellers.png" alt="For Sellers" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
@@ -3924,14 +4669,17 @@
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -3965,9 +4713,9 @@
       <div class="hero-left">
         <div><h1>Leadership Team</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/leadership-hero.png" alt="Leadership Team">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -3984,7 +4732,7 @@
     <section class="section-white">
       <div class="container">
         <h3 class="section-heading" style="max-width: 600px;">
-          Leading by serving.
+          Leading by serving
         </h3>
         <p style="color: var(--text-muted); margin-top: 12px; max-width: 800px; line-height: 1.7;">
           Our leadership team brings together diverse expertise in investment banking, private 
@@ -4095,7 +4843,7 @@
             The right people, right when you need them.
           </h3>
           <p style="color: var(--text-muted); margin-bottom: 16px; line-height: 1.7;">
-            Sells coordinates a network of specialized professionals to support every 
+            Sells coordinates a network of specialized professionals to support every
             aspect of your transaction.
           </p>
           <hr class="gold-dotted">
@@ -4108,21 +4856,24 @@
             <li>Private Wealth Management</li>
           </ul>
         </div>
-        <div class="photo-placeholder" style="min-height: 300px;">
-          Photo placeholder
+        <div>
+          <img src="images/photos/company-rightpeople.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -4156,9 +4907,9 @@
       <div class="hero-left">
         <div><h1>Insights</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/insights-hero.png" alt="Insights">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -4182,13 +4933,16 @@
       <div class="container">
 
         <!-- Filter tabs -->
-        <div class="filter-tabs">
-          <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);">Filter by:</span>
-          <img src="images/patterns/diamond.png" alt="" style="width: 10px; height: 10px;">
-          <span class="filter-tab active" data-filter="all">All</span>
-          <span class="filter-tab" data-filter="sellers">Sellers</span>
-          <span class="filter-tab" data-filter="buyers">Buyers</span>
-          <span class="filter-tab" data-filter="news">News</span>
+        <div class="filter-plain">
+          <span class="filter-label">Filter by:</span>
+          <span class="filter-link active" data-filter="all">All</span>
+          <span class="filter-sep">/</span>
+          <span class="filter-link" data-filter="sellers">Sellers</span>
+          <span class="filter-sep">/</span>
+          <span class="filter-link" data-filter="buyers">Buyers</span>
+          <span class="filter-sep">/</span>
+          <span class="filter-link" data-filter="news">News</span>
+          <img src="images/patterns/diamond.png" alt="" style="width: 10px; height: 10px; margin-left: 4px;">
         </div>
 
         <!-- Insights grid -->
@@ -4298,14 +5052,17 @@
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -4339,9 +5096,9 @@
       <div class="hero-left">
         <div><h1>Insights</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/insights-hero.png" alt="Insights">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
@@ -4408,14 +5165,17 @@
     </section>
 
     <!-- === LET'S TALK === -->
-    <section class="lets-talk-section">
-      <div class="container two-col-40-60">
-        <div class="photo-placeholder" style="min-height: 400px;">Photo placeholder</div>
-        <div>
-          <h2 class="section-heading-lg" style="color: #fff;">Let&rsquo;s Talk</h2>
-          <p style="color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.7;">
-            Whether you're exploring options, preparing for a transaction, or seeking a 
-            trusted advisor, we're here to help.
+    <section class="hp-letstalk">
+      <div class="container hp-letstalk-grid">
+        <div class="hp-letstalk-photo">
+          <img src="images/photos/letstalk-people.png" alt="Let's Talk">
+        </div>
+        <div class="hp-letstalk-right">
+          <h2>Let&rsquo;s Talk</h2>
+          <p>
+            Successful relationships begin with honest, straightforward conversations. Whether you&rsquo;re planning a
+            capital investment or in the middle of a prospective transaction, we welcome the chance to meet you, listen to
+            your story, and share our insights and resources.
           </p>
           <form class="form-grid" onsubmit="return handleFormSubmit(event)">
             <div class="form-fields">
@@ -4449,64 +5209,63 @@
       <div class="hero-left">
         <div><h1>Contact Us</h1></div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right has-photo">
+        <img class="hero-bg" src="images/photos/contact-hero.png" alt="Contact Us">
         <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
-        Photo placeholder
       </div>
     </section>
     <div class="hero-gold-line"></div>
 
     <!-- === CONTACT SECTION === -->
     <section class="section-white">
-      <div class="container two-col-55-45">
-
-        <!-- Form side -->
-        <div>
-          <h2 class="section-heading text-gold">Let&rsquo;s Talk</h2>
-          <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
-            Ready to start a conversation? Fill out the form below and a member of our 
-            team will be in touch within one business day. All inquiries are treated with 
-            the utmost confidentiality.
-          </p>
-          <form class="contact-form" onsubmit="return handleFormSubmit(event)">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <input type="text" placeholder="First Name*" required>
-              <input type="text" placeholder="Last Name*" required>
+      <div class="container">
+        <h2 class="section-heading text-gold" style="margin-bottom: 8px;">Let&rsquo;s Talk</h2>
+        <p style="color: var(--text-muted); margin-bottom: 32px; line-height: 1.7; max-width: 600px;">
+          Successful relationships begin with honest, straightforward conversations.
+          Whether you&rsquo;re planning a capital investment or in the middle of a prospective
+          transaction, we welcome the chance to meet you, listen to your story, and share
+          our insights and resources.
+        </p>
+        <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start;">
+            <!-- Left: stacked fields -->
+            <div>
+              <input type="text" placeholder="First Name*" required style="width: 100%; margin-bottom: 12px;">
+              <input type="text" placeholder="Last Name*" required style="width: 100%; margin-bottom: 12px;">
+              <input type="text" placeholder="Title" style="width: 100%; margin-bottom: 12px;">
+              <input type="text" placeholder="Company*" required style="width: 100%; margin-bottom: 12px;">
+              <input type="email" placeholder="Email*" required style="width: 100%; margin-bottom: 12px;">
+              <input type="tel" placeholder="Phone*" required style="width: 100%;">
             </div>
-            <input type="text" placeholder="Title" style="width: 100%; margin-top: 12px;">
-            <input type="text" placeholder="Company*" required style="width: 100%; margin-top: 12px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">
-              <input type="email" placeholder="Email*" required>
-              <input type="tel" placeholder="Phone*" required>
+            <!-- Middle: textarea -->
+            <div style="display: flex; flex-direction: column; height: 100%;">
+              <textarea placeholder="How can we help?" style="width: 100%; min-height: 260px; padding: 12px 14px; background: #f0f0f5; border: none; border-bottom: 2px solid #ccc; font-size: 0.9rem; border-radius: 2px; resize: vertical; font-family: var(--font-body); flex: 1;"></textarea>
+              <div style="margin-top: 16px;">
+                <button type="submit" class="pill pill-gold">Submit</button>
+              </div>
             </div>
-            <textarea placeholder="How can we help?" style="width: 100%; margin-top: 12px; min-height: 120px; padding: 12px 14px; background: #f0f0f5; border: none; border-bottom: 2px solid #ccc; font-size: 0.9rem; border-radius: 2px; resize: vertical; font-family: var(--font-body);"></textarea>
-            <div style="margin-top: 16px;">
-              <button type="submit" class="pill pill-gold">Submit</button>
+            <!-- Right: address -->
+            <div>
+              <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 16px;">
+                Address
+              </h3>
+              <h4 style="font-weight: 700; margin-bottom: 4px;">Headquarters</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+                5100 W JB Hunt Drive<br>
+                STE 830<br>
+                Rogers, AR 72758
+              </p>
+              <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px;">
+                Office Line
+              </h3>
+              <p>
+                <a href="tel:+14793343226" style="color: var(--gold); font-weight: 600; font-size: 1rem;">
+                  +1 (479) 334-3226
+                </a>
+              </p>
             </div>
-          </form>
-        </div>
-
-        <!-- Address side -->
-        <div>
-          <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 16px;">
-            Address
-          </h3>
-          <h4 style="font-weight: 700; margin-bottom: 4px;">Headquarters</h4>
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
-            5100 W JB Hunt Drive<br>
-            STE 830<br>
-            Rogers, AR 72758
-          </p>
-          <h3 class="text-gold" style="font-family: var(--font-heading); font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px;">
-            Office Line
-          </h3>
-          <p>
-            <a href="tel:+14793343226" style="color: var(--gold); font-weight: 600; font-size: 1rem;">
-              +1 (479) 334-3226
-            </a>
-          </p>
-        </div>
-
+          </div>
+        </form>
       </div>
     </section>
 
@@ -4860,12 +5619,12 @@
     /* ==============================================================
        INSIGHTS FILTER — Click filter tab to show/hide cards
        ============================================================== */
-    const filterTabs = document.querySelectorAll('.filter-tab');
+    const filterTabs = document.querySelectorAll('.filter-tab, .filter-link');
 
     filterTabs.forEach(function(tab) {
       tab.addEventListener('click', function() {
         // Update active tab styling
-        filterTabs.forEach(function(t) {
+        document.querySelectorAll('.filter-tab, .filter-link').forEach(function(t) {
           t.classList.remove('active');
         });
         this.classList.add('active');
@@ -5006,5 +5765,26 @@
     })();
   </script>
 
+
+  <script>
+    // For Sellers process carousel
+    const fsBannerTexts = [
+      'Preparation and Positioning',
+      'Market Outreach & Engagement',
+      'Due Diligence & Negotiations',
+      'Close & Transition'
+    ];
+
+    function showFsPhase(n) {
+      document.querySelectorAll('.fs-process-phase').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.fs-process-dot').forEach(d => d.classList.remove('active'));
+      const phases = document.querySelectorAll('.fs-process-phase');
+      const dots = document.querySelectorAll('.fs-process-dot');
+      if (phases[n]) phases[n].classList.add('active');
+      if (dots[n]) dots[n].classList.add('active');
+      const banner = document.getElementById('fsPhaseBanner');
+      if (banner && fsBannerTexts[n]) banner.textContent = fsBannerTexts[n];
+    }
+  </script>
 </body>
 </html>
