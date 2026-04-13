@@ -1766,30 +1766,75 @@
     .numbered-item {
       display: flex;
       gap: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      align-items: flex-start;
     }
 
     .numbered-item .num {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      color: var(--gold);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
       font-weight: 700;
-      line-height: 1;
       flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .numbered-item .pair-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 6px;
+    }
+
+    .numbered-item .pair-row strong {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    .numbered-item .pair-row strong.text-gold {
+      color: var(--gold);
     }
 
     .numbered-item .arrow {
-      color: var(--gold);
-      font-weight: 700;
-      margin: 0 8px;
+      flex: 1;
+      max-width: 70px;
+      height: 0;
+      border-top: 2px dashed var(--gold);
+      margin: 0 12px;
+      position: relative;
+    }
+
+    .numbered-item .arrow::after {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: -6px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid var(--gold);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
     }
 
     /* Gold underline heading */
     .gold-underline-heading {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-dark);
       border-bottom: 2px solid var(--gold);
       display: inline-block;
-      padding-bottom: 4px;
-      margin-bottom: 10px;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
     }
 
     /* Knowledge section (For Sellers blue section) */
@@ -3177,6 +3222,7 @@
     /* Hero right photo support */
     .hero-right.has-photo {
       background: none !important;
+      overflow: hidden;
     }
     .hero-right.has-photo img.hero-bg {
       position: absolute;
@@ -3187,7 +3233,19 @@
       z-index: 0;
     }
     .hero-right.has-photo .hero-bar {
+      display: none !important;
+    }
+    .hero-right.has-photo::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 14%;
+      background: rgba(234, 157, 19, 0.55);
+      clip-path: polygon(0% 70%, 100% 100%, 100% 100%, 0% 100%);
       z-index: 2;
+      pointer-events: none;
     }
 
     /* Testimonial light variant (white/light bg) */
@@ -4117,7 +4175,7 @@
           </p>
         </div>
         <div>
-          <img src="images/photos/fb-intro.png" alt="Investors" style="width: 100%; border-radius: 6px; object-fit: cover;">
+          <img src="images/photos/company-rightpeople.png" alt="Investors" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
@@ -4138,25 +4196,19 @@
             <h4 class="gold-underline-heading">Aligned</h4>
             <ul>
               <li>Focused on defining success beyond the number</li>
-              <li>Aligned incentives: our fee structure rewards the best outcome for you</li>
+              <li>Aligned incentives that reward the best outcome for you</li>
               <li>Long-term relationship mentality vs. transactional</li>
-              <li>Protecting what matters: employees, culture, brand, community impact</li>
+              <li>Protecting what matters: employees, culture, brand, community</li>
             </ul>
           </div>
 
           <div>
             <h4 class="gold-underline-heading">Strategic</h4>
             <ul>
-              <li>Market intelligence: we know who&rsquo;s buying, what they&rsquo;re paying, and why</li>
-              <li>Proactive deal positioning&mdash;getting ahead of market dynamics</li>
-              <li>Sophisticated buyer targeting and qualification process</li>
-              <li>Strategic storytelling: crafting the narrative that maximizes value</li>
-              <li>Process tailored to your situation and goals</li>
-              <li>Anticipating buyer objections and structuring around them</li>
-              <li>Understanding consolidation trends and industry-specific dynamics</li>
-              <li>Data-driven approach to valuation and market positioning</li>
-              <li>Creating competitive tension to drive optimal terms</li>
-              <li>Not just finding a buyer&mdash;finding the right buyer</li>
+              <li>Market intelligence on who&rsquo;s buying and why</li>
+              <li>Proactive deal positioning ahead of market dynamics</li>
+              <li>Sophisticated buyer targeting and qualification</li>
+              <li>Strategic storytelling that maximizes value</li>
             </ul>
           </div>
 
@@ -4164,15 +4216,9 @@
             <h4 class="gold-underline-heading">Ethical</h4>
             <ul>
               <li>Transparency in process, pricing, and expectations</li>
-              <li>Honest about valuation&mdash;we won&rsquo;t overpromise to win business</li>
+              <li>Honest about valuation&mdash;no overpromising</li>
               <li>Protecting confidentiality throughout the process</li>
-              <li>No pressure tactics or artificially rushed timelines</li>
-              <li>Clear communication about risks, trade-offs, and deal structure implications</li>
-              <li>Integrity in representing your business to buyers</li>
-              <li>Fair dealings with all parties while fiercely advocating for our client</li>
               <li>Long-term reputation over short-term fees</li>
-              <li>We turn down deals that aren&rsquo;t the right fit</li>
-              <li>Compliance with all regulatory and professional standards</li>
             </ul>
           </div>
 
@@ -4180,12 +4226,9 @@
             <h4 class="gold-underline-heading">Proven</h4>
             <ul>
               <li>$2B+ in closed M&amp;A transactions</li>
-              <li>Track record across home services, commercial services, and related industries</li>
-              <li>Repeat clients and referral-based growth</li>
+              <li>Track record across home and commercial services</li>
               <li>Trusted by both founders and institutional investors</li>
-              <li>Deep buyer network cultivated over years of relationship building</li>
-              <li>Successfully navigated complex deal structures and negotiations</li>
-              <li>Portfolio of closed deals that speak for themselves</li>
+              <li>Deep buyer network cultivated over years</li>
             </ul>
           </div>
 
@@ -4338,7 +4381,7 @@
     <section class="section-white" style="padding-top: 0;">
       <div class="container two-col">
         <div>
-          <img src="images/photos/fb-intro.png" alt="Above all, we value trust" style="width: 100%; border-radius: 6px; object-fit: cover;">
+          <img src="images/photos/company-rightpeople.png" alt="Above all, we value trust" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
         <div>
           <h3 class="section-heading">Above all, we value trust.</h3>
@@ -4350,36 +4393,42 @@
           </p>
 
           <div class="numbered-item">
-            <span class="num">1.</span>
-            <div>
-              <strong>Dignity</strong> 
-              <span class="arrow">&rarr;</span> 
-              <strong class="text-gold">Empathy</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+            <span class="num">1</span>
+            <div style="flex: 1;">
+              <div class="pair-row">
+                <strong>Dignity</strong>
+                <span class="arrow"></span>
+                <strong class="text-gold">Empathy</strong>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
                 Respect for all leads to deeper understanding and connection.
               </p>
             </div>
           </div>
 
           <div class="numbered-item">
-            <span class="num">2.</span>
-            <div>
-              <strong>Honesty</strong> 
-              <span class="arrow">&rarr;</span> 
-              <strong class="text-gold">Alignment</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+            <span class="num">2</span>
+            <div style="flex: 1;">
+              <div class="pair-row">
+                <strong>Honesty</strong>
+                <span class="arrow"></span>
+                <strong class="text-gold">Alignment</strong>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
                 Transparency and communication lead to shared interests and cooperation.
               </p>
             </div>
           </div>
 
           <div class="numbered-item">
-            <span class="num">3.</span>
-            <div>
-              <strong>Integrity</strong> 
-              <span class="arrow">&rarr;</span> 
-              <strong class="text-gold">Process</strong>
-              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; line-height: 1.5;">
+            <span class="num">3</span>
+            <div style="flex: 1;">
+              <div class="pair-row">
+                <strong>Integrity</strong>
+                <span class="arrow"></span>
+                <strong class="text-gold">Process</strong>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
                 Discipline and precision lead to consistent, repeatable results.
               </p>
             </div>
@@ -4432,7 +4481,7 @@
           </ul>
         </div>
         <div style="direction: ltr;">
-          <img src="images/photos/company-rightpeople.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
+          <img src="images/photos/fb-intro.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
@@ -4831,7 +4880,7 @@
           </ul>
         </div>
         <div>
-          <img src="images/photos/company-rightpeople.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
+          <img src="images/photos/fb-intro.png" alt="The right people" style="width: 100%; border-radius: 6px; object-fit: cover;">
         </div>
       </div>
     </section>
