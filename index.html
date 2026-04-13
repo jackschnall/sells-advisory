@@ -3252,7 +3252,7 @@
       position: relative;
     }
     #page-for-buyers .hero {
-      min-height: 260px;
+      min-height: 360px;
       grid-template-columns: 50% 50%;
       overflow: visible;
       position: relative;
@@ -3275,24 +3275,27 @@
       position: absolute;
       inset: 0;
       width: 100%;
-      height: calc(100% + 60px);
+      height: 100%;
       object-fit: cover;
       z-index: 1;
     }
-    /* Diagonal gold wedge cutting into the bottom-right of the
-       photo. The triangle's point is at the bottom-left of the
-       photo; the hypotenuse rises up-right to the middle of the
-       right edge; the gold fills the lower-right and extends below. */
+    /* Disable the generic ::after overlay on this page; the wedge is
+       a real element below. */
     #page-for-buyers .hero-right.has-photo::after {
-      content: "";
+      display: none !important;
+    }
+    /* Gold parallelogram wedge: thick on the right, tapering to a
+       narrow strip on the left. Sits over the lower-right of the
+       photo and extends below the hero. */
+    #page-for-buyers .fb-hero-wedge {
       position: absolute;
-      top: 0;
       left: 0;
       right: 0;
       bottom: -60px;
-      background: rgba(234, 157, 19, 0.85);
-      clip-path: polygon(0% 100%, 100% 45%, 100% 100%);
-      z-index: 2;
+      height: 220px;
+      background: rgba(234, 157, 19, 0.78);
+      clip-path: polygon(0% 78%, 100% 8%, 100% 100%, 0% 100%);
+      z-index: 3;
       pointer-events: none;
     }
     /* Top dotted gold line above hero */
@@ -4257,13 +4260,13 @@
   <div class="page" id="page-for-buyers" data-nav="for-buyers">
 
     <!-- === HERO === -->
-    <section class="hero">
+    <section class="hero fb-hero">
       <div class="hero-left">
         <div><h1>For Buyers</h1></div>
       </div>
       <div class="hero-right has-photo">
         <img class="hero-bg" src="images/photos/fb-hero.png" alt="For Buyers">
-        <img src="images/patterns/yellow-bar-01.png" class="hero-bar" alt="">
+        <div class="fb-hero-wedge"></div>
       </div>
     </section>
     <div class="hero-gold-line"></div>
