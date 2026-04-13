@@ -2282,7 +2282,7 @@
       background-size: auto;
       background-repeat: repeat;
       background-position: top center;
-      padding: 60px 0 100px;
+      padding: 60px 0 140px;
       text-align: center;
       color: #fff;
     }
@@ -2305,6 +2305,14 @@
 
     .hp-diff-top h2 em {
       font-style: italic;
+    }
+
+    .hp-diff-top h2 sup {
+      font-size: 0.35em;
+      font-family: var(--font-body);
+      vertical-align: super;
+      top: -0.4em;
+      margin-left: 1px;
     }
 
     .hp-diff-top h2 img {
@@ -2349,46 +2357,35 @@
       object-position: center;
     }
 
+    .hp-photo-band::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 38%;
+      height: 100%;
+      background: rgba(234, 157, 19, 0.55);
+      clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
     @media (max-width: 768px) {
       .hp-photo-band {
         height: 180px;
       }
     }
 
-    /* --- HP Industries (white bg with blue accents) --- */
+    /* --- HP Industries (white bg with faint triangle pattern) --- */
     .hp-industries {
-      background: #fff;
+      background-color: #fff;
+      background-image: url('images/patterns/pattern-faint-blue.png');
+      background-repeat: repeat;
+      background-position: top center;
+      background-size: auto;
       padding: 60px 0;
       position: relative;
       overflow: hidden;
-    }
-
-    .hp-industries::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 180px;
-      height: 100%;
-      background-image: url('images/patterns/pattern-blue-2rows.jpg');
-      background-color: var(--navy);
-      background-size: auto;
-      clip-path: polygon(0 0, 100% 20%, 40% 100%, 0 100%);
-      z-index: 0;
-    }
-
-    .hp-industries::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 180px;
-      height: 100%;
-      background-image: url('images/patterns/pattern-blue-2rows.jpg');
-      background-color: var(--navy);
-      background-size: auto;
-      clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 80%);
-      z-index: 0;
     }
 
     .hp-industries .container {
@@ -2438,10 +2435,6 @@
     }
 
     @media (max-width: 768px) {
-      .hp-industries::before,
-      .hp-industries::after {
-        display: none;
-      }
       .hp-industries .container {
         grid-template-columns: 1fr;
         gap: 24px;
