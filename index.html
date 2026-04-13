@@ -3268,16 +3268,17 @@
       letter-spacing: 0;
     }
     #page-for-buyers .hero-right.has-photo {
-      overflow: visible;
+      overflow: hidden;
       position: relative;
+      background: #fff;
     }
     #page-for-buyers .hero-right.has-photo img.hero-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center bottom;
+      object-fit: contain;
+      object-position: right center;
       z-index: 1;
     }
     /* The PDF source image already includes the gold wedge baked in,
