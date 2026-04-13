@@ -3269,7 +3269,9 @@
     }
     /* Allow the photo to leak out past the hero, like the PDF where
        it extends down into the white intro and the light-gray invest
-       section. */
+       section. The image is anchored to the LEFT edge of the right
+       column (flush against the navy block), full column width, and
+       overflows downward by its natural aspect. */
     #page-for-buyers .hero-right.has-photo {
       overflow: visible;
       position: relative;
@@ -3277,13 +3279,19 @@
     }
     #page-for-buyers .hero-right.has-photo img.hero-bg {
       position: absolute;
+      inset: auto;
       top: 0;
-      right: 0;
+      left: 0;
+      right: auto;
+      bottom: auto;
       width: 100%;
       height: auto;
+      min-width: 100%;
+      max-width: none;
       max-height: none;
       z-index: 5;
       object-fit: initial;
+      display: block;
     }
     /* The PDF source image already includes the gold wedge baked in,
        so disable the generic ::after overlay on this page. */
