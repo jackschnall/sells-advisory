@@ -3255,16 +3255,22 @@
        (~625px) so the image is never upscaled (no blur), never
        towers over the section below it, and the navy left column
        fills whatever horizontal space remains — always flush
-       against the photo at any viewport width. */
+       against the photo at any viewport width. The hero height
+       is driven by the navy block's natural content height (not
+       stretched), so the photo simply overflows below it like
+       the PDF. */
     #page-for-buyers .hero {
-      min-height: 320px;
       grid-template-columns: 1fr min(625px, 45vw);
+      grid-template-rows: auto;
+      align-items: stretch;
       overflow: visible;
       position: relative;
       background: #fff;
+      min-height: 0;
     }
     #page-for-buyers .hero-left {
-      padding: 36px 48px;
+      padding: 56px 48px;
+      min-height: 0;
     }
     #page-for-buyers .hero-left h1 {
       font-family: var(--font-heading);
