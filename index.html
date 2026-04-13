@@ -3251,9 +3251,14 @@
     #page-for-buyers {
       position: relative;
     }
+    /* Make the right column size to the image's natural width
+       (~625px) so the image is never upscaled (no blur), never
+       towers over the section below it, and the navy left column
+       fills whatever horizontal space remains — always flush
+       against the photo at any viewport width. */
     #page-for-buyers .hero {
       min-height: 320px;
-      grid-template-columns: 55% 45%;
+      grid-template-columns: 1fr min(625px, 45vw);
       overflow: visible;
       position: relative;
       background: #fff;
@@ -3267,11 +3272,10 @@
       font-size: 3rem;
       letter-spacing: 0;
     }
-    /* Allow the photo to leak out past the hero, like the PDF where
-       it extends down into the white intro and the light-gray invest
-       section. The image is anchored to the LEFT edge of the right
-       column (flush against the navy block), full column width, and
-       overflows downward by its natural aspect. */
+    /* The image renders at its natural pixel size (or scaled down
+       on narrow viewports), anchored at the top of its column, and
+       allowed to overflow visually below the hero so the gold wedge
+       extends into the intro section like the PDF. */
     #page-for-buyers .hero-right.has-photo {
       overflow: visible;
       position: relative;
@@ -3286,7 +3290,6 @@
       bottom: auto;
       width: 100%;
       height: auto;
-      min-width: 100%;
       max-width: none;
       max-height: none;
       z-index: 5;
