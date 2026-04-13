@@ -3252,9 +3252,9 @@
       position: relative;
     }
     #page-for-buyers .hero {
-      min-height: 360px;
+      min-height: 380px;
       grid-template-columns: 50% 50%;
-      overflow: visible;
+      overflow: hidden;
       position: relative;
       background: #fff;
     }
@@ -3277,26 +3277,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: right bottom;
       z-index: 1;
     }
-    /* Disable the generic ::after overlay on this page; the wedge is
-       a real element below. */
+    /* The PDF source image already includes the gold wedge baked in,
+       so disable the generic ::after overlay on this page. */
     #page-for-buyers .hero-right.has-photo::after {
       display: none !important;
-    }
-    /* Gold parallelogram wedge: thick on the right, tapering to a
-       narrow strip on the left. Sits over the lower-right of the
-       photo and extends below the hero. */
-    #page-for-buyers .fb-hero-wedge {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -60px;
-      height: 220px;
-      background: rgba(234, 157, 19, 0.78);
-      clip-path: polygon(0% 78%, 100% 8%, 100% 100%, 0% 100%);
-      z-index: 3;
-      pointer-events: none;
     }
     /* Top dotted gold line above hero */
     #page-for-buyers::before {
@@ -4265,8 +4252,7 @@
         <div><h1>For Buyers</h1></div>
       </div>
       <div class="hero-right has-photo">
-        <img class="hero-bg" src="images/photos/fb-hero.png" alt="For Buyers">
-        <div class="fb-hero-wedge"></div>
+        <img class="hero-bg" src="images/photos/fb-hero-pdf.png" alt="For Buyers">
       </div>
     </section>
     <div class="hero-gold-line"></div>
