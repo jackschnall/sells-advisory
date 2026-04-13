@@ -3280,17 +3280,18 @@
       z-index: 1;
     }
     /* Diagonal gold wedge cutting into the bottom-right of the
-       photo. Thick on the right (extends down past the photo),
-       tapering to a point on the lower-left — matches the PDF. */
+       photo. The triangle's point is at the bottom-left of the
+       photo; the hypotenuse rises up-right to the middle of the
+       right edge; the gold fills the lower-right and extends below. */
     #page-for-buyers .hero-right.has-photo::after {
       content: "";
       position: absolute;
-      bottom: -60px;
+      top: 0;
       left: 0;
       right: 0;
-      height: 80%;
+      bottom: -60px;
       background: rgba(234, 157, 19, 0.85);
-      clip-path: polygon(100% 30%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 100%, 100% 45%, 100% 100%);
       z-index: 2;
       pointer-events: none;
     }
