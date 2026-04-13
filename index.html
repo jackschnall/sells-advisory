@@ -3252,9 +3252,9 @@
       position: relative;
     }
     #page-for-buyers .hero {
-      min-height: 480px;
+      min-height: 320px;
       grid-template-columns: 55% 45%;
-      overflow: hidden;
+      overflow: visible;
       position: relative;
       background: #fff;
     }
@@ -3267,19 +3267,23 @@
       font-size: 3rem;
       letter-spacing: 0;
     }
+    /* Allow the photo to leak out past the hero, like the PDF where
+       it extends down into the white intro and the light-gray invest
+       section. */
     #page-for-buyers .hero-right.has-photo {
-      overflow: hidden;
+      overflow: visible;
       position: relative;
-      background: #fff;
+      background: transparent;
     }
     #page-for-buyers .hero-right.has-photo img.hero-bg {
       position: absolute;
-      inset: 0;
+      top: 0;
+      right: 0;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: right center;
-      z-index: 1;
+      height: auto;
+      max-height: none;
+      z-index: 5;
+      object-fit: initial;
     }
     /* The PDF source image already includes the gold wedge baked in,
        so disable the generic ::after overlay on this page. */
@@ -3334,6 +3338,12 @@
     /* Investors intro: full-width text, no photo */
     .fb-intro {
       padding: 48px 0 32px;
+      position: relative;
+    }
+    .fb-intro .container {
+      max-width: 55%;
+      margin-left: 0;
+      padding-left: 48px;
     }
     .fb-intro-heading {
       font-family: var(--font-heading);
@@ -3345,8 +3355,15 @@
     .fb-intro-copy {
       color: var(--text-muted);
       line-height: 1.7;
-      max-width: 720px;
+      max-width: 600px;
       margin: 0;
+    }
+    @media (max-width: 768px) {
+      .fb-intro .container {
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
     }
 
     /* Testimonial light variant (white/light bg) */
