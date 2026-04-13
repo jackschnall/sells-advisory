@@ -3279,8 +3279,9 @@
       object-fit: cover;
       z-index: 1;
     }
-    /* Replace the flat bottom bar with a diagonal gold wedge that
-       drops past the navy block, like the PDF. */
+    /* Diagonal gold wedge sitting under the photo. Thick on the
+       left where it meets the navy, tapering to a point on the
+       right edge — matches the PDF "right-directing angle". */
     #page-for-buyers .hero-right.has-photo::after {
       content: "";
       position: absolute;
@@ -3288,8 +3289,8 @@
       left: 0;
       right: 0;
       height: 80%;
-      background: rgba(234, 157, 19, 0.78);
-      clip-path: polygon(0% 100%, 100% 35%, 100% 100%);
+      background: rgba(234, 157, 19, 0.85);
+      clip-path: polygon(0% 30%, 100% 100%, 0% 100%);
       z-index: 2;
       pointer-events: none;
     }
@@ -3336,6 +3337,24 @@
       max-width: 720px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    /* Investors intro: full-width text, no photo */
+    .fb-intro {
+      padding: 48px 0 32px;
+    }
+    .fb-intro-heading {
+      font-family: var(--font-heading);
+      font-weight: 400;
+      color: var(--navy);
+      font-size: 2rem;
+      margin: 0 0 14px;
+    }
+    .fb-intro-copy {
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0;
     }
 
     /* Testimonial light variant (white/light bg) */
@@ -4249,23 +4268,18 @@
     <div class="hero-gold-line"></div>
 
     <!-- === INTRO === -->
-    <section class="section-white">
-      <div class="container two-col">
-        <div>
-          <h3 class="section-heading">
-            Investors: This is your story, too.
-          </h3>
-          <p style="color: var(--text-muted); margin-top: 12px; line-height: 1.7;">
-            Investors, buyers, and sponsors trust Sells to make thoughtful introductions
-            to private business owners. We&rsquo;ve cultivated these relationships, often over
-            years at a time. We know their stories and what matters to them. It means that
-            as an investor, you&rsquo;re not merely pursuing a lead&mdash;you&rsquo;re connecting with
-            purpose to create lasting value.
-          </p>
-        </div>
-        <div>
-          <img src="images/photos/company-rightpeople.png" alt="Investors" style="width: 100%; border-radius: 6px; object-fit: cover;">
-        </div>
+    <section class="section-white fb-intro">
+      <div class="container">
+        <h3 class="section-heading fb-intro-heading">
+          Investors: This is your story, too.
+        </h3>
+        <p class="fb-intro-copy">
+          Investors, buyers, and sponsors trust Sells to make thoughtful introductions
+          to private business owners. We&rsquo;ve cultivated these relationships, often over
+          years at a time. We know their stories and what matters to them. It means that
+          as an investor, you&rsquo;re not merely pursuing a lead&mdash;you&rsquo;re connecting with
+          purpose to create lasting value.
+        </p>
       </div>
     </section>
 
